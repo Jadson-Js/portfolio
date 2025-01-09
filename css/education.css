@@ -1,0 +1,159 @@
+.education {
+  padding: 8rem 0;
+  background: var(--dark-text);
+}
+
+.education__title {
+  line-height: 15vw;
+  font-size: 14vw;
+
+  color: black;
+  font-weight: bold;
+  width: 100%;
+  overflow-wrap: break-word;
+  text-transform: uppercase;
+}
+
+.education__description {
+  padding-top: 1.5rem;
+  max-width: 50ch;
+  color: var(--c6);
+  line-height: 24px;
+  margin-bottom: 3.75rem;
+}
+
+.education__description strong {
+  font-weight: bold;
+  color: white;
+}
+
+.education__list {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 3rem;
+  justify-content: space-between;
+  margin-bottom: 3.75rem;
+}
+
+.education__box {
+  position: relative;
+  background: black;
+  border-radius: 5px;
+  padding: 1rem;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.education__box::before {
+  content: "";
+  position: absolute;
+  width: 0.4rem;
+  height: 1.5rem;
+  background: var(--green);
+  left: -0.5rem;
+  top: 1rem;
+}
+
+.education__graduation {
+  color: var(--c6);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.education__course {
+  color: white;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+.education__faculty {
+  color: var(--c6);
+  font-size: 0.9rem;
+}
+
+.courses {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.languages {
+  position: relative;
+}
+
+.courses::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: url("../images/cursos.svg") no-repeat;
+  top: -0.5rem;
+  left: 9rem;
+}
+
+.languages::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: url("../images/idiomas.svg") no-repeat;
+  top: -0.5rem;
+  left: 3.5rem;
+}
+
+.course__title,
+.language__title {
+  color: var(--c7);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.course__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.course__description,
+.language__description {
+  width: fit-content;
+  color: white;
+}
+
+.course__time {
+  width: fit-content;
+  color: var(--c7);
+}
+
+.language__level {
+  color: var(--c7);
+}
+
+@media (min-width: 768px) {
+  .courses::before,
+  .languages::before {
+    left: -2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .education__list {
+    flex-direction: row;
+  }
+
+  .education__title {
+    line-height: 140px;
+    font-size: 8rem;
+  }
+}
+
+@media (min-width: 1440px) {
+}

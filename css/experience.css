@@ -1,0 +1,102 @@
+.experience {
+  padding: 4rem 0 8rem 0;
+}
+
+.experience__title {
+  color: var(--c3);
+  line-height: 15vw;
+  font-weight: bold;
+  font-size: 14vw;
+  width: 100%;
+  overflow-wrap: break-word;
+  text-transform: uppercase;
+}
+
+.experience__description {
+  padding-top: 1.5rem;
+  max-width: 50ch;
+  color: var(--light-text);
+  line-height: 24px;
+  margin-bottom: 3.75rem;
+}
+
+.experience__description strong {
+  font-weight: bold;
+  color: var(--dark-text);
+}
+
+.works {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+}
+
+.work__box {
+  position: relative;
+  background: var(--c1);
+  border-radius: 5px;
+  border: 1px solid var(--c2);
+  padding: 0.5rem 1rem;
+
+  display: grid;
+  grid-template-columns: 50% 45%;
+  gap: 5%;
+}
+
+.work__box::before {
+  content: "";
+  position: absolute;
+  width: 0.4rem;
+  height: 1.5rem;
+  background: var(--green);
+  left: -0.5rem;
+  top: 1rem;
+}
+
+.work__title {
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.work__date {
+  color: var(--c10);
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.work__description {
+  color: var(--c10);
+}
+
+.work__skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.work__skill {
+  background: white;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+
+.work__skill p {
+  color: var(--dark-text);
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+  .experience__title {
+    line-height: 140px;
+    font-size: 8rem;
+  }
+}
+
+@media (min-width: 1440px) {
+}

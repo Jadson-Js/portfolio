@@ -1,0 +1,50 @@
+:root {
+  --c1: #f5f5f5;
+  --c2: #f0f0f0;
+  --c3: #e0e0e0;
+  --c4: #cccccc;
+  --c5: #b8b8b8;
+  --c6: #a3a3a3;
+  --c7: #8f8f8f;
+  --c8: #7a7a7a;
+  --c9: #666666;
+  --c10: #525252;
+  --c11: #3d3d3d;
+  --c12: #292929;
+
+  --dark-text: #141414;
+  --light-text: #525252;
+
+  --green: linear-gradient(#b6f829, #67dd0a);
+  --purple: linear-gradient(#b629f8, #800add);
+}
+
+body {
+  font-family: "Poppins", serif;
+}
+
+.content {
+  max-width: 1260px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 425px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 35% 55%;
+    gap: 10%;
+  }
+
+  .content {
+    max-width: 1260px;
+    padding: 0 2rem;
+    margin: 0 auto;
+  }
+}
