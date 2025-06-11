@@ -1,0 +1,38 @@
+import Link from "next/link";
+
+import { FaLinkedin } from "react-icons/fa";
+import { IoDocumentTextSharp } from "react-icons/io5";
+import { FaSquareGithub } from "react-icons/fa6";
+
+// className="container mx-auto flex flex-col justify-between items-center border-b-1 border-bg2 py-16"
+
+export function Navbar() {
+  return (
+    <header className="sm:mx-16">
+      <nav className="container mx-auto px-4 py-8 flex flex-col justify-center items-center gap-4 border-b-1 border-bg2 md:flex-row md:justify-between">
+        <h1 className="text-3xl ">Jadson Abreu</h1>
+
+        <ul className="flex flex-row flex-wrap  items-center gap-4 md:gap-8">
+          <li>
+            <Link href={"#"} className="flex flex-row items-center gap-1">
+              <FaLinkedin className="text-primary text-xl" />
+              <p className="text-slate-200">LinkedIn</p>
+            </Link>
+          </li>
+          <li>
+            <Link href={"#"} className="flex flex-row items-center gap-1">
+              <IoDocumentTextSharp className="text-primary text-xl" />
+              <p className="text-slate-200">Curriculum</p>
+            </Link>
+          </li>
+          <li>
+            <Link href={"#"} className="flex flex-row items-center gap-1">
+              <FaSquareGithub className="text-primary text-xl" />
+              <p className="text-slate-200">Github</p>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
