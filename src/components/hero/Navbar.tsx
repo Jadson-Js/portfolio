@@ -8,9 +8,9 @@ import { FaSquareGithub } from "react-icons/fa6";
 
 export function Navbar() {
   return (
-    <header className="sm:mx-16">
-      <nav className="container mx-auto px-4 py-8 flex flex-col justify-center items-center gap-4 border-b-1 border-bg2 md:flex-row md:justify-between">
-        <h1 className="text-3xl ">Jadson Abreu</h1>
+    <header className="px-8">
+      <nav className="container mx-auto py-8 flex flex-col justify-center items-center gap-4 border-b-1 border-bg2 md:flex-row md:justify-between">
+        <h1 className="text-2xl">Jadson Abreu</h1>
 
         <ul className="flex flex-row flex-wrap  items-center gap-4 md:gap-8">
           <li>
