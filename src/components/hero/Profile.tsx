@@ -8,7 +8,7 @@ import { MdEmail } from "react-icons/md";
 export function Profile() {
   return (
     <div className="border-t-4 border-l-4 border-primary rounded-tl-[125px]">
-      <div className="border-2 rounded-tl-[120px] rounded-br-[125px]  pl-4 pr-16 py-8 flex flex-col gap-8">
+      <article className="border-2 rounded-tl-[120px] rounded-br-[125px] flex flex-col gap-8 py-8 pl-2 pr-8 sm:pl-4 sm:pr-12">
         <div className="flex flex-col items-center text-center">
           <Image
             className="mb-4"
@@ -25,7 +25,7 @@ export function Profile() {
         <ul className="flex flex-col gap-4">
           <li>
             <Link href={"#"} className="flex flex-row items-center gap-1">
-              <MdEmail className="text-primary text-2xl flex-shrink-0" />
+              <MdEmail className="text-primary text-2xl " />
               <p className="text-slate-200 overflow-hidden whitespace-nowrap text-ellipsis">
                 jadson20051965@gmail.com
               </p>
@@ -33,7 +33,7 @@ export function Profile() {
           </li>
           <li>
             <Link href={"#"} className="flex flex-row items-center gap-1">
-              <FaPhoneSquareAlt className="text-primary text-2xl flex-shrink-0" />
+              <FaPhoneSquareAlt className="text-primary text-2xl" />
               <p className="text-slate-200 overflow-hidden whitespace-nowrap text-ellipsis">
                 (98)98350-7939
               </p>
@@ -41,7 +41,7 @@ export function Profile() {
           </li>
           <li>
             <Link href={"#"} className="flex flex-row items-center gap-1">
-              <FaLinkedin className="text-primary text-2xl flex-shrink-0" />
+              <FaLinkedin className="text-primary text-2xl" />
               <p className="text-slate-200 overflow-hidden whitespace-nowrap text-ellipsis">
                 Linkedin
               </p>
@@ -49,7 +49,7 @@ export function Profile() {
           </li>
           <li>
             <Link href={"#"} className="flex flex-row items-center gap-1">
-              <FaSquareGithub className="text-primary text-2xl flex-shrink-0" />
+              <FaSquareGithub className="text-primary text-2xl" />
               <p className="text-slate-200 overflow-hidden whitespace-nowrap text-ellipsis">
                 Github
               </p>
@@ -60,7 +60,7 @@ export function Profile() {
         <button className="bg-white text-slate-800 text-xl flex flex-row justify-center items-center gap-4 p-4 rounded-4xl">
           Download CV <GoDownload className="text-3xl" />
         </button>
-      </div>
+      </article>
     </div>
   );
 }
