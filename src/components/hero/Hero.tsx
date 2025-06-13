@@ -1,8 +1,6 @@
 import { Content } from "./Content";
 import { Profile } from "./Profile";
 import { Ticker } from "./Ticker";
-import { Whatsapp } from "./Whatsapp";
-// import { Content } from "./Content";
 
 export function Hero() {
   return (
@@ -18,7 +16,6 @@ export function Hero() {
         </div>
       </div>
 
-      <Whatsapp />
       <Ticker />
     </section>
   );
