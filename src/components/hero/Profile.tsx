@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaLinkedin, FaPhoneSquareAlt } from "react-icons/fa";
-import { FaSquareGithub } from "react-icons/fa6";
+import { AiOutlineEye } from "react-icons/ai";
 import { GoDownload } from "react-icons/go";
-import { MdEmail } from "react-icons/md";
 
 export function Profile() {
   return (
@@ -22,44 +20,24 @@ export function Profile() {
           <p className="text-slate-200">Full Stack Developer</p>
         </div>
 
-        <ul className="flex flex-col gap-4 flex-1">
-          <li>
-            <Link href={"#"} className="flex flex-row items-center gap-1">
-              <MdEmail className="text-primary text-2xl" />
-              <p className="text-slate-200 overflow-hidden whitespace-nowrap text-ellipsis flex-1">
-                jadson20051965@gmail.com
-              </p>
-            </Link>
-          </li>
-          <li>
-            <Link href={"#"} className="flex flex-row items-center gap-1">
-              <FaPhoneSquareAlt className="text-primary text-2xl" />
-              <p className="text-slate-200 overflow-hidden whitespace-nowrap text-ellipsis">
-                (98)98350-7939
-              </p>
-            </Link>
-          </li>
-          <li>
-            <Link href={"#"} className="flex flex-row items-center gap-1">
-              <FaLinkedin className="text-primary text-2xl" />
-              <p className="text-slate-200 overflow-hidden whitespace-nowrap text-ellipsis">
-                Linkedin
-              </p>
-            </Link>
-          </li>
-          <li>
-            <Link href={"#"} className="flex flex-row items-center gap-1">
-              <FaSquareGithub className="text-primary text-2xl" />
-              <p className="text-slate-200 overflow-hidden whitespace-nowrap text-ellipsis">
-                Github
-              </p>
-            </Link>
-          </li>
-        </ul>
+        <div className="flex flex-col gap-4">
+          <Link
+            href={"/CV.pdf"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-slate-800  flex flex-row justify-between items-center gap-4 p-4 rounded-4xl flex-1 uppercase"
+          >
+            Ver Currículo <AiOutlineEye className="text-2xl" />
+          </Link>
 
-        <button className="bg-white text-slate-800 text-lg flex flex-row justify-center items-center gap-4 p-4 rounded-4xl flex-1">
-          Download CV <GoDownload className="text-3xl" />
-        </button>
+          <Link
+            href={"/CV.pdf"}
+            download
+            className="border border-white text-white  flex flex-row justify-between items-center gap-4 p-4 rounded-4xl flex-1 uppercase"
+          >
+            Baixar Currículo <GoDownload className="text-2xl" />
+          </Link>
+        </div>
       </article>
     </div>
   );

@@ -6,7 +6,7 @@ export function Content() {
       <div>
         <span className="text-primary text-sm">&lt;h1&gt;</span>
 
-        <h2 className="text-4xl md:text-6xl">
+        <h2 className="text-2xl md:text-4xl">
           Eu sou <span className="text-primary">Jadson</span>, <br /> Full Stack
           Developer <span className="text-primary text-sm">&lt;/h1&gt;</span>
         </h2>
