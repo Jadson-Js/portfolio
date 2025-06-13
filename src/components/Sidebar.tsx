@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { FiUser } from "react-icons/fi";
-import { IoMdClose } from "react-icons/io";
 import {
   MdOutlineDesktopWindows,
   MdOutlineEmail,
