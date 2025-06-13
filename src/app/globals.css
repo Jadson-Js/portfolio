@@ -18,3 +18,16 @@ body {
   color: var(--white);
   font-family: "Ibm Plex Mono", monospace, Arial, Helvetica, sans-serif;
 }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
