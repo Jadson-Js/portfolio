@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section className="px-8 py-8 md:py-16">
       <div className="container mx-auto flex flex-col justify-csenter">
-        <span className="text-5xl text-primary inline text-center mb-8 md:mb-16 md:text-7xl">
+        <span className="text-6xl text-primary inline text-center mb-8 md:mb-16 md:text-8xl">
           Hello World!
         </span>
 

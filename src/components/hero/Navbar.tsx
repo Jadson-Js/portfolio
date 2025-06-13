@@ -15,19 +15,19 @@ export function Navbar() {
         <ul className="flex flex-row flex-wrap  items-center gap-4 md:gap-8">
           <li>
             <Link href={"#"} className="flex flex-row items-center gap-1">
-              <FaLinkedin className="text-primary text-xl" />
+              <FaLinkedin className="text-primary text-lg" />
               <p className="text-slate-200">LinkedIn</p>
             </Link>
           </li>
           <li>
             <Link href={"#"} className="flex flex-row items-center gap-1">
-              <IoDocumentTextSharp className="text-primary text-xl" />
+              <IoDocumentTextSharp className="text-primary text-lg" />
               <p className="text-slate-200">Curriculum</p>
             </Link>
           </li>
           <li>
             <Link href={"#"} className="flex flex-row items-center gap-1">
-              <FaSquareGithub className="text-primary text-xl" />
+              <FaSquareGithub className="text-primary text-lg" />
               <p className="text-slate-200">Github</p>
             </Link>
           </li>

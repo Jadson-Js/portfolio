@@ -7,9 +7,9 @@ import { MdEmail } from "react-icons/md";
 
 export function Profile() {
   return (
-    <div className="border-t-4 border-l-4 border-primary rounded-tl-[125px]">
-      <article className="border-2 rounded-tl-[120px] rounded-br-[125px] flex flex-col gap-8 py-8 pl-2 pr-8 sm:pl-4 sm:pr-12">
-        <div className="flex flex-col items-center text-center">
+    <div className="border-t-4 border-l-4 border-primary rounded-tl-[125px] w-fit max-w-full">
+      <article className="border-2 rounded-tl-[120px] rounded-br-[125px] flex flex-col gap-8 py-8 pl-2 pr-8 sm:pl-4 sm:pr-12 w-full">
+        <div className="flex flex-col items-center text-center flex-1">
           <Image
             className="mb-4"
             src="/profile.svg"
@@ -22,11 +22,11 @@ export function Profile() {
           <p className="text-slate-200">Full Stack Developer</p>
         </div>
 
-        <ul className="flex flex-col gap-4">
+        <ul className="flex flex-col gap-4 flex-1">
           <li>
             <Link href={"#"} className="flex flex-row items-center gap-1">
-              <MdEmail className="text-primary text-2xl " />
-              <p className="text-slate-200 overflow-hidden whitespace-nowrap text-ellipsis">
+              <MdEmail className="text-primary text-2xl" />
+              <p className="text-slate-200 overflow-hidden whitespace-nowrap text-ellipsis flex-1">
                 jadson20051965@gmail.com
               </p>
             </Link>
@@ -57,7 +57,7 @@ export function Profile() {
           </li>
         </ul>
 
-        <button className="bg-white text-slate-800 text-xl flex flex-row justify-center items-center gap-4 p-4 rounded-4xl">
+        <button className="bg-white text-slate-800 text-lg flex flex-row justify-center items-center gap-4 p-4 rounded-4xl flex-1">
           Download CV <GoDownload className="text-3xl" />
         </button>
       </article>
