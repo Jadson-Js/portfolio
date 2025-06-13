@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FiUser } from "react-icons/fi";
+import { IoMdClose } from "react-icons/io";
 import {
   MdOutlineDesktopWindows,
   MdOutlineEmail,
@@ -9,7 +10,7 @@ import { RxDashboard } from "react-icons/rx";
 
 export function Sidebar() {
   return (
-    <aside className="fixed top-1/4 left-20 p-2 bg-bg3 rounded-full border border-white">
+    <aside className="hidden fixed top-1/4 left-20 p-2 bg-bg3 rounded-full border border-white xl:block">
       <ul className="flex flex-col gap-6">
         <li className="bg-white rounded-full p-2">
           <Link href={"#"}>
