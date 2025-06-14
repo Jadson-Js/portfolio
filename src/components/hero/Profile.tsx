@@ -9,8 +9,8 @@ export function Profile() {
       <article className="border-2 rounded-tl-[120px] rounded-br-[125px] flex flex-col gap-8 py-8 pl-2 pr-8 sm:pl-4 sm:pr-12 w-full">
         <div className="flex flex-col items-center text-center flex-1">
           <Image
-            className="mb-4"
-            src="/profile.svg"
+            className="mb-4 rounded-full border-4 border-primary"
+            src="/profile.png"
             alt="Profile Photo"
             width={100}
             height={100}
