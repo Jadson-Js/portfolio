@@ -3,10 +3,10 @@ import Image from "next/image";
 export function About() {
   return (
     <section
-      className="bg-bg3  p-20 "
+      className="bg-bg3  px-8 py-8 xl:px-20 md:py-16 min-h-screen flex items-center"
       style={{ backgroundImage: "url('/about_bg.svg')" }}
     >
-      <div className="max-w-[1200px] container mx-auto grid grid-cols-1 gap-16 md:grid-cols-3">
+      <div className="max-w-[1200px] container mx-auto grid grid-cols-1 gap-16  md:grid-cols-3">
         <article className="flex flex-col gap-8 col-span-2">
           <div className="bg-bg1 border-2  border-primary w-fit px-4 py-2 rounded-tl-3xl rounded-br-3xl">
             <h2 className="text-2xl">Sobre</h2>
@@ -53,7 +53,7 @@ export function About() {
 
         <div>
           <Image
-            className="rounded-3xl h-full"
+            className="hidden rounded-3xl h-full md:block object-cover"
             src="/about_illustration.jpg"
             alt="About Illustration"
             width={450}
