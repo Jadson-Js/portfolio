@@ -8,20 +8,34 @@ import React from "react";
 import { useProjects } from "@/hooks/useProjects";
 import { usePagination } from "@/hooks/usePagination";
 import { Content } from "./Content";
+import { IProject } from "@/types/IProject";
 
 export function Projects() {
   const { projects } = useProjects();
   const { paginatedItems, next, previous } = usePagination(projects, 3);
+  const [project, setProject] = React.useState<IProject | null>(null);
 
   const projectsMobile = () => {
-    return projects.map((project) => (
-      <Card key={project.id} project={project} className="block xl:hidden" />
+    return projects.map((project, index) => (
+      <div
+        key={index}
+        onClick={() => setProject(project)}
+        className="block xl:hidden"
+      >
+        <Card project={project} />
+      </div>
     ));
   };
 
   const projectsDesktop = () => {
-    return paginatedItems.map((project) => (
-      <Card key={project.id} project={project} className="hidden xl:block" />
+    return paginatedItems.map((project, index) => (
+      <div
+        key={index}
+        onClick={() => setProject(project)}
+        className="hidden xl:block"
+      >
+        <Card project={project} />
+      </div>
     ));
   };
 
@@ -40,7 +54,7 @@ export function Projects() {
           </p>
         </div>
 
-        <div className="flex flex-row items-center gap-4 overflow-x-auto pb-4 md:gap-8 ">
+        <div className="flex flex-row justify-center items-center gap-4 overflow-x-auto pb-4 md:gap-8 ">
           <GrFormPrevious
             className="hidden xl:block text-5xl bg-bg1 rounded-full p-1 shrink-0 hover:bg-bg3 cursor-pointer transition-all"
             onClick={previous}
@@ -55,7 +69,7 @@ export function Projects() {
           />
         </div>
 
-        <Content project={projects[0]} />
+        <Content project={project} setProject={setProject} />
       </div>
     </section>
   );

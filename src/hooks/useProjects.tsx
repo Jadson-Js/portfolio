@@ -6,7 +6,6 @@ import { IProject } from "@/types/IProject";
 export function useProjects() {
   const [projects] = React.useState<IProject[]>([
     {
-      id: 1,
       title: "DevPortfolio",
       subTitle: "Portfólio Pessoal",
       imageUrl: "/project.jpg",
@@ -17,7 +16,6 @@ export function useProjects() {
       githubUrl: "https://github.com/seuuser/dev-portfolio",
     },
     {
-      id: 2,
       title: "TaskMaster",
       subTitle: "Gerenciador de Tarefas",
       imageUrl: "/project.jpg",
@@ -28,7 +26,6 @@ export function useProjects() {
       githubUrl: "https://github.com/seuuser/taskmaster",
     },
     {
-      id: 3,
       title: "NutriCalc",
       subTitle: "Calculadora Nutricional",
       imageUrl: "/project.jpg",
@@ -39,7 +36,6 @@ export function useProjects() {
       githubUrl: "https://github.com/seuuser/nutricalc",
     },
     {
-      id: 4,
       title: "EcoMarket",
       subTitle: "E-commerce Sustentável",
       imageUrl: "/project.jpg",
@@ -50,7 +46,6 @@ export function useProjects() {
       githubUrl: "https://github.com/seuuser/ecomarket",
     },
     {
-      id: 5,
       title: "DevChat",
       subTitle: "Chat em Tempo Real",
       imageUrl: "/project.jpg",
@@ -61,7 +56,6 @@ export function useProjects() {
       githubUrl: "https://github.com/seuuser/devchat",
     },
     {
-      id: 6,
       title: "ReportaAí",
       subTitle: "Sistema de Denúncias Urbanas",
       imageUrl: "/project.jpg",

@@ -3,7 +3,14 @@ import { FaGithub } from "react-icons/fa";
 import { GrFormPrevious } from "react-icons/gr";
 import { TbWorld } from "react-icons/tb";
 
-export function Content({ project }: { project: IProject }) {
+interface ContentProps {
+  project: IProject | null;
+  setProject: (value: null) => void;
+}
+
+export function Content({ project, setProject }: ContentProps) {
+  if (!project) return null;
+
   const tecnologies = project.tecnologies.map((title, index) => {
     return (
       <li key={index}>
@@ -17,7 +24,10 @@ export function Content({ project }: { project: IProject }) {
   return (
     <div className="fixed w-full h-full bg-black/40 top-0 left-0 z-20">
       <article className="fixed max-w-120 h-full bg-bg1 top-0 right-0 p-4 flex flex-col gap-6 ">
-        <div className="border-b-2 border-bg2 pb-4">
+        <div
+          className="border-b-2 border-bg2 pb-4"
+          onClick={() => setProject(null)}
+        >
           <GrFormPrevious className=" text-2xl rounded-full p-0.5  cursor-pointer border border-slate-200 text-slate-200" />
         </div>
 
