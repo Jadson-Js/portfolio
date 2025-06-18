@@ -22,7 +22,10 @@ export function Content({ project, setProject }: ContentProps) {
   });
 
   return (
-    <div className="fixed w-full h-full bg-black/40 top-0 left-0 z-20">
+    <div
+      className="fixed w-full h-full bg-black/40 top-0 left-0 z-20"
+      onClick={() => setProject(null)}
+    >
       <article className="fixed max-w-120 h-full bg-bg1 top-0 right-0 p-4 flex flex-col gap-6 ">
         <div
           className="border-b-2 border-bg2 pb-4"
