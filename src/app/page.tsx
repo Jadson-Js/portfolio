@@ -1,4 +1,5 @@
 import { About } from "@/components/about/About";
+import { Contact } from "@/components/contact/Contact";
 import { Experiences } from "@/components/experiences/Experiences";
 import { Hero } from "@/components/hero/Hero";
 import { Navbar } from "@/components/hero/Navbar";
@@ -18,6 +19,8 @@ export default function Home() {
         <Projects />
 
         <Experiences />
+
+        <Contact />
 
         <Sidebar />
         <Whatsapp />

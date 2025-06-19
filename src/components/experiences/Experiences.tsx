@@ -11,6 +11,7 @@ export function Experiences() {
       className="bg-bg3  px-8 py-8 xl:px-20 md:py-16 min-h-screen flex items-center"
       style={{
         backgroundImage: "url('/about_bg.svg')",
+        backgroundSize: "cover",
       }}
     >
       <div className="max-w-[1200px] container mx-auto flex flex-col justify-center">

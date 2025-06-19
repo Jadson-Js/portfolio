@@ -25,7 +25,7 @@ export function Profile() {
             href={"/CV.pdf"}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white text-slate-800  flex flex-row justify-between items-center gap-4 p-4 rounded-4xl flex-1 uppercase"
+            className="bg-white text-slate-800  flex flex-row justify-between items-center gap-4 p-4 rounded-4xl flex-1 uppercase hover:bg-gray-300 transition-all"
           >
             Ver Currículo <AiOutlineEye className="text-2xl" />
           </Link>
@@ -33,7 +33,7 @@ export function Profile() {
           <Link
             href={"/CV.pdf"}
             download
-            className="border border-white text-white  flex flex-row justify-between items-center gap-4 p-4 rounded-4xl flex-1 uppercase"
+            className="border border-white text-white  flex flex-row justify-between items-center gap-4 p-4 rounded-4xl flex-1 uppercase hover:bg-bg3/50 transition-all"
           >
             Baixar Currículo <GoDownload className="text-2xl" />
           </Link>
