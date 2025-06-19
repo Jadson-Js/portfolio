@@ -9,10 +9,14 @@ import { useProjects } from "@/hooks/useProjects";
 import { usePagination } from "@/hooks/usePagination";
 import { Content } from "./Content";
 import { IProject } from "@/types/IProject";
+import { getCurrentSection } from "../utils/getCurrentSection";
 
 export function Projects() {
   const { projects } = useProjects();
-  const { paginatedItems, next, previous } = usePagination(projects, 3);
+  const { paginatedItems, next, previous, currentPage } = usePagination(
+    projects,
+    3,
+  );
   const [project, setProject] = React.useState<IProject | null>(null);
 
   const projectsMobile = () => {
@@ -28,19 +32,33 @@ export function Projects() {
   };
 
   const projectsDesktop = () => {
-    return paginatedItems.map((project, index) => (
+    const cards = paginatedItems.map((project, index) => (
       <div
-        key={index}
+        key={`${currentPage}-${index}`} // Key única por página
         onClick={() => setProject(project)}
-        className="hidden xl:block"
+        className="hidden xl:block animate-fade-in"
+        style={{
+          animationDelay: `${index * 100}ms`, // Stagger effect
+        }}
       >
         <Card project={project} />
       </div>
     ));
+
+    return <div className="flex flex-row gap-4">{cards}</div>;
   };
+
+  React.useEffect(() => {
+    console.log(currentPage);
+  }, [currentPage]);
+
+  React.useEffect(() => {
+    getCurrentSection("projects");
+  }, []);
 
   return (
     <section
+      id="projects"
       className="bg-bg3  px-8 py-8 xl:px-20 md:py-16 min-h-screen flex items-center bg-cover relative"
       style={{ backgroundImage: "url('/projects_bg.png')" }}
     >
@@ -54,7 +72,7 @@ export function Projects() {
           </p>
         </div>
 
-        <div className="flex flex-row justify-center items-center gap-4 overflow-x-auto pb-4 md:gap-8 ">
+        <div className="flex flex-row justify-center items-center gap-4 overflow-x-auto overflow-y-hidden pb-4 md:gap-8">
           <GrFormPrevious
             className="hidden xl:block text-5xl bg-bg1 rounded-full p-1 shrink-0 hover:bg-bg3 cursor-pointer transition-all"
             onClick={previous}

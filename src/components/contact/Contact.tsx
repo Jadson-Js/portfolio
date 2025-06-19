@@ -1,9 +1,20 @@
+"use client";
+
+import React from "react";
 import { TitleSection } from "../TitleSection";
 import { Form } from "./Form";
+import { getCurrentSection } from "../utils/getCurrentSection";
 
 export function Contact() {
+  React.useEffect(() => {
+    getCurrentSection("contact");
+  }, []);
+
   return (
-    <section className="bg-bg3  px-8 py-8 xl:px-20 md:py-16 min-h-screen flex items-center bg-cover relative">
+    <section
+      className="bg-bg3  px-8 py-8 xl:px-20 md:py-16 min-h-screen flex items-center bg-cover relative"
+      id="contact"
+    >
       <div className="max-w-[1200px] container mx-auto flex flex-col justify-center items-center">
         <div className="flex flex-col gap-4 mb-8">
           <TitleSection title="Contato" />

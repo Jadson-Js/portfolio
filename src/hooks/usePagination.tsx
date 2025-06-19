@@ -8,7 +8,8 @@ export function usePagination<T>(items: T[], itemsPerPage: number) {
   const end = start + itemsPerPage;
   const paginatedItems = items.slice(start, end);
 
-  const next = () => setCurrentPage((p) => Math.min(p + 1, totalPages));
+  const next = async () => setCurrentPage((p) => Math.min(p + 1, totalPages));
+
   const previous = () => setCurrentPage((p) => Math.max(p - 1, 1));
 
   return {

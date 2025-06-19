@@ -10,8 +10,8 @@ export function Card({
   description,
 }: IExperience) {
   return (
-    <article className="bg-bg3 rounded p-4 border border-white gap-4 flex flex-col md:flex-row">
-      <span className="text-gray-400 text-sm border-b-2 h-fit pb-4 border-primary md:border-b-0 md:border-r-2  md:pb-0 md:pr-4">
+    <article className="bg-bg3 rounded p-4 border border-white gap-4 flex flex-col ">
+      <span className="text-gray-400 text-xs border-b-2 w-fit h-fit pb-1 border-primary   ">
         {startDate} - {endData}
       </span>
 

@@ -2,12 +2,19 @@
 import { useExperiences } from "@/hooks/useExperiences";
 import { TitleSection } from "../TitleSection";
 import { Card } from "./Card";
+import React from "react";
+import { getCurrentSection } from "../utils/getCurrentSection";
 
 export function Experiences() {
   const { experiences } = useExperiences();
 
+  React.useEffect(() => {
+    getCurrentSection("experiences");
+  }, []);
+
   return (
     <section
+      id="experiences"
       className="bg-bg3  px-8 py-8 xl:px-20 md:py-16 min-h-screen flex items-center"
       style={{
         backgroundImage: "url('/about_bg.svg')",

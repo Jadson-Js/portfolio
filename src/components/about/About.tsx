@@ -1,8 +1,16 @@
+"use client";
 import Image from "next/image";
+import React from "react";
+import { getCurrentSection } from "../utils/getCurrentSection";
 
 export function About() {
+  React.useEffect(() => {
+    getCurrentSection("about");
+  }, []);
+
   return (
     <section
+      id="about"
       className="bg-bg3  px-8 py-8 xl:px-20 md:py-16 min-h-screen flex items-center"
       style={{ backgroundImage: "url('/about_bg.svg')" }}
     >
@@ -53,8 +61,8 @@ export function About() {
 
         <div>
           <Image
-            className="hidden rounded-3xl h-full md:block object-cover"
-            src="/about_illustration.jpg"
+            className="hidden rounded-xl h-full md:block  object-top"
+            src="/about.jpg"
             alt="About Illustration"
             width={450}
             height={550}

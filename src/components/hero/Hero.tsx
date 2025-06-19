@@ -1,10 +1,20 @@
+"use client";
+import React from "react";
 import { Content } from "./Content";
 import { Profile } from "./Profile";
 import { Ticker } from "./Ticker";
+import { getCurrentSection } from "../utils/getCurrentSection";
 
 export function Hero() {
+  React.useEffect(() => {
+    getCurrentSection("hero");
+  }, []);
+
   return (
-    <section className="relative min-h-[calc(100vh-100px)] px-8 py-4 md:py-8 flex ">
+    <section
+      id="hero"
+      className="relative min-h-[calc(100vh-100px)] px-8 py-4 md:py-8 flex "
+    >
       <div className="max-w-[1200px] container mx-auto  flex flex-col gap-4 md:gap-8 justify-center  mb-16 md:mb-4">
         <span className="text-center text-5xl text-primary inline-block md:text-7xl">
           Hello World!
