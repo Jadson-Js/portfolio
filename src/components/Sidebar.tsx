@@ -11,7 +11,11 @@ import { RxDashboard } from "react-icons/rx";
 import { scroll } from "../utils/scroll";
 import React from "react";
 
-export function Sidebar() {
+interface ISidebarProps {
+  sectionTarget: React.RefObject<number>;
+}
+
+export function Sidebar({ sectionTarget }: ISidebarProps) {
   const [hash, setHash] = React.useState<string>("");
 
   React.useEffect(() => {
@@ -37,7 +41,13 @@ export function Sidebar() {
             hash === "hero" ? "bg-white" : "bg-bg3"
           }`}
         >
-          <div onClick={() => scroll("hero")} className={"cursor-pointer"}>
+          <div
+            onClick={() => {
+              scroll("hero");
+              sectionTarget.current = 0;
+            }}
+            className={"cursor-pointer"}
+          >
             <RxDashboard
               className={`text-xl ${hash === "hero" && "text-slate-800"}`}
             />
@@ -48,7 +58,13 @@ export function Sidebar() {
             hash === "about" ? "bg-white" : "bg-bg3"
           }`}
         >
-          <div onClick={() => scroll("about")} className="cursor-pointer">
+          <div
+            onClick={() => {
+              scroll("about");
+              sectionTarget.current = 1;
+            }}
+            className="cursor-pointer"
+          >
             <FiUser
               className={`text-xl ${hash === "about" && "text-slate-800"}`}
             />
@@ -59,7 +75,13 @@ export function Sidebar() {
             hash === "projects" ? "bg-white" : "bg-bg3"
           }`}
         >
-          <div onClick={() => scroll("projects")} className="cursor-pointer">
+          <div
+            onClick={() => {
+              scroll("projects");
+              sectionTarget.current = 2;
+            }}
+            className="cursor-pointer"
+          >
             <MdOutlineDesktopWindows
               className={`text-xl ${hash === "projects" && "text-slate-800"}`}
             />
@@ -70,7 +92,13 @@ export function Sidebar() {
             hash === "experiences" ? "bg-white" : "bg-bg3"
           }`}
         >
-          <div onClick={() => scroll("experiences")} className="cursor-pointer">
+          <div
+            onClick={() => {
+              scroll("experiences");
+              sectionTarget.current = 3;
+            }}
+            className="cursor-pointer"
+          >
             <MdWorkOutline
               className={`text-xl ${
                 hash === "experiences" && "text-slate-800"
@@ -83,7 +111,13 @@ export function Sidebar() {
             hash === "contact" ? "bg-white" : "bg-bg3"
           }`}
         >
-          <div onClick={() => scroll("contact")} className="cursor-pointer">
+          <div
+            onClick={() => {
+              scroll("contact");
+              sectionTarget.current = 4;
+            }}
+            className="cursor-pointer"
+          >
             <MdOutlineEmail
               className={`text-xl ${hash === "contact" && "text-slate-800"}`}
             />

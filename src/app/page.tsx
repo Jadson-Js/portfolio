@@ -29,7 +29,7 @@ export default function Home() {
     document.body.style.overflow = "hidden";
 
     // Handler para desktop (wheel)
-    const handleWheel = (e) => {
+    const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
       const scrollY = e.deltaY;
       const isTopScroll = scrollY < 0;
@@ -45,12 +45,12 @@ export default function Home() {
     };
 
     // Handler para mobile (touch start)
-    const handleTouchStart = (e) => {
+    const handleTouchStart = (e: TouchEvent) => {
       touchStart.current = e.targetTouches[0].clientY;
     };
 
     // Handler para mobile (touch move)
-    const handleTouchMove = (e) => {
+    const handleTouchMove = (e: TouchEvent) => {
       e.preventDefault(); // Previne o scroll padrão
       touchEnd.current = e.targetTouches[0].clientY;
     };
@@ -61,7 +61,6 @@ export default function Home() {
 
       const distance = touchStart.current - touchEnd.current;
       const isTopSwipe = distance < 0;
-      const isBottomSwipe = distance > 0;
 
       // Mínimo de distância para considerar um swipe válido
       const minSwipeDistance = 50;
@@ -132,7 +131,7 @@ export default function Home() {
 
         <Contact />
 
-        <Sidebar />
+        <Sidebar sectionTarget={sectionTarget} />
         <Whatsapp />
       </main>
       <Footer />
