@@ -49,3 +49,18 @@ body {
 .animate-fade-in {
   animation: fade-in 0.5s ease-out forwards;
 }
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(200px); /* começa 20px à direita */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* volta pra posição original */
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.5s ease-out forwards;
+}
