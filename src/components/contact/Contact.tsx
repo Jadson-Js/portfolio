@@ -12,7 +12,7 @@ export function Contact() {
 
   return (
     <section
-      className="bg-bg3  px-8 py-8 xl:px-20 md:py-16 min-h-screen flex items-center bg-cover relative"
+      className="bg-bg3  px-8 py-8 xl:px-20 md:py-16 min-h-[calc(100vh-65px)] flex items-center bg-cover relative"
       id="contact"
     >
       <div className="max-w-[1200px] container mx-auto flex flex-col justify-center items-center">

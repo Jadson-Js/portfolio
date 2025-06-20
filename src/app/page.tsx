@@ -20,17 +20,40 @@ export default function Home() {
     status: false,
     direction: 1,
   });
+  const [isMobile, setIsMobile] = React.useState(false);
 
-  // Refs para controlar o touch
-  const touchStart = React.useRef(0);
-  const touchEnd = React.useRef(0);
-
+  // Effect para detectar mudanças de tamanho de tela
   React.useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 1024px)");
+
+    // Define o estado inicial
+    setIsMobile(mediaQuery.matches);
+
+    // Handler para mudanças na media query
+    const handleMediaChange = (e: MediaQueryListEvent) => {
+      setIsMobile(e.matches);
+    };
+
+    // Adiciona o listener
+    mediaQuery.addEventListener("change", handleMediaChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaChange);
+    };
+  }, []);
+
+  // Effect principal que depende do estado isMobile
+  React.useEffect(() => {
+    if (isMobile) {
+      // No mobile, restaura o scroll normal e remove listeners
+      document.body.style.overflow = "auto";
+      return;
+    }
+
+    // No desktop, aplica a lógica de scroll personalizado
     document.body.style.overflow = "hidden";
 
-    // Handler para desktop (wheel)
     const handleWheel = (e: WheelEvent) => {
-      e.preventDefault();
       const scrollY = e.deltaY;
       const isTopScroll = scrollY < 0;
 
@@ -44,55 +67,15 @@ export default function Home() {
       }
     };
 
-    // Handler para mobile (touch start)
-    const handleTouchStart = (e: TouchEvent) => {
-      touchStart.current = e.targetTouches[0].clientY;
-    };
-
-    // Handler para mobile (touch move)
-    const handleTouchMove = (e: TouchEvent) => {
-      e.preventDefault(); // Previne o scroll padrão
-      touchEnd.current = e.targetTouches[0].clientY;
-    };
-
-    // Handler para mobile (touch end)
-    const handleTouchEnd = () => {
-      if (!touchStart.current || !touchEnd.current) return;
-
-      const distance = touchStart.current - touchEnd.current;
-      const isTopSwipe = distance < 0;
-
-      // Mínimo de distância para considerar um swipe válido
-      const minSwipeDistance = 50;
-
-      if (Math.abs(distance) > minSwipeDistance && !isMoving.status) {
-        setIsMoving({
-          status: true,
-          direction: isTopSwipe ? -1 : 1,
-        });
-      }
-
-      // Reset dos valores
-      touchStart.current = 0;
-      touchEnd.current = 0;
-    };
-
-    // Adicionar event listeners
     window.addEventListener("wheel", handleWheel, { passive: false });
-    window.addEventListener("touchstart", handleTouchStart, { passive: true });
-    window.addEventListener("touchmove", handleTouchMove, { passive: false });
-    window.addEventListener("touchend", handleTouchEnd, { passive: true });
 
     return () => {
       window.removeEventListener("wheel", handleWheel);
-      window.removeEventListener("touchstart", handleTouchStart);
-      window.removeEventListener("touchmove", handleTouchMove);
-      window.removeEventListener("touchend", handleTouchEnd);
     };
-  }, [isMoving.status]);
+  }, [isMobile, isMoving.status]); // Agora depende de isMobile também
 
   React.useEffect(() => {
-    if (!isMoving.status) return;
+    if (!isMoving.status || isMobile) return; // Não executa no mobile
 
     setTimeout(() => {
       setIsMoving({
@@ -105,17 +88,18 @@ export default function Home() {
       sectionTarget.current + isMoving.direction >= 0 &&
       sectionTarget.current + isMoving.direction <= 4
     ) {
-      console.log(sectionTarget.current + isMoving.direction);
       sectionTarget.current += isMoving.direction;
     }
-  }, [isMoving.status]);
+  }, [isMoving.status, isMobile]);
 
   React.useEffect(() => {
+    if (isMobile) return; // Não executa scroll personalizado no mobile
+
     const el = document.getElementById(sectionsName[sectionTarget.current]);
     if (!el) return;
 
     el.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, [sectionTarget.current]);
+  }, [sectionTarget.current, isMobile]);
 
   return (
     <>
