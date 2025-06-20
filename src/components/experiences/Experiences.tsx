@@ -3,7 +3,7 @@ import { useExperiences } from "@/hooks/useExperiences";
 import { TitleSection } from "../TitleSection";
 import { Card } from "./Card";
 import React from "react";
-import { getCurrentSection } from "../utils/getCurrentSection";
+import { getCurrentSection } from "../../utils/getCurrentSection";
 
 export function Experiences() {
   const { experiences } = useExperiences();

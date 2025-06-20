@@ -3,7 +3,7 @@
 import React from "react";
 import { TitleSection } from "../TitleSection";
 import { Form } from "./Form";
-import { getCurrentSection } from "../utils/getCurrentSection";
+import { getCurrentSection } from "../../utils/getCurrentSection";
 
 export function Contact() {
   React.useEffect(() => {

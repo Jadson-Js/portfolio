@@ -1,6 +1,6 @@
 "use client";
 import { MdEmail } from "react-icons/md";
-import { scroll } from "../utils/scroll";
+import { scroll } from "../../utils/scroll";
 
 export function Content() {
   return (

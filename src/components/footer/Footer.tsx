@@ -13,7 +13,15 @@ export function Footer() {
         </span>
 
         <span className="text-xs text-center">
-          Design inspirado em JohannLeon, com customizações próprias.
+          Design inspirado em{" "}
+          <Link
+            href="https://dribbble.com/johannleon2025"
+            className="hover:text-primary"
+            target="_blank"
+          >
+            JohannLeon
+          </Link>
+          , com customizações próprias.
         </span>
 
         <nav>

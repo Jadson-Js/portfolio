@@ -1,15 +1,22 @@
+"use client";
 import Link from "next/link";
 
 import { FaLinkedin, FaPhoneSquareAlt } from "react-icons/fa";
 import { IoDocumentTextSharp } from "react-icons/io5";
 import { FaSquareGithub } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import React from "react";
+import { getCurrentSection } from "@/utils/getCurrentSection";
 
 // className="container mx-auto flex flex-col justify-between items-center border-b-1 border-bg2 py-16"
 
 export function Navbar() {
+  React.useEffect(() => {
+    getCurrentSection("hero");
+  }, []);
+
   return (
-    <header className="px-8">
+    <header id="hero" className="px-8">
       <nav className="container mx-auto py-8 flex flex-col justify-center items-center gap-4 border-b-1 border-bg2 md:flex-row md:justify-between">
         <h1 className="text-2xl">Jadson Abreu</h1>
 

@@ -9,7 +9,7 @@ import { useProjects } from "@/hooks/useProjects";
 import { usePagination } from "@/hooks/usePagination";
 import { Content } from "./Content";
 import { IProject } from "@/types/IProject";
-import { getCurrentSection } from "../utils/getCurrentSection";
+import { getCurrentSection } from "../../utils/getCurrentSection";
 
 export function Projects() {
   const { projects } = useProjects();
@@ -47,10 +47,6 @@ export function Projects() {
 
     return <div className="flex flex-row gap-4">{cards}</div>;
   };
-
-  React.useEffect(() => {
-    console.log(currentPage);
-  }, [currentPage]);
 
   React.useEffect(() => {
     getCurrentSection("projects");

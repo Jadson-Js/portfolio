@@ -8,29 +8,22 @@ import {
 } from "react-icons/md";
 import { RxDashboard } from "react-icons/rx";
 
-import { scroll } from "./utils/scroll";
+import { scroll } from "../utils/scroll";
 import React from "react";
 
 export function Sidebar() {
   const [hash, setHash] = React.useState<string>("");
 
   React.useEffect(() => {
-    // Função que será executada quando o hash mudar
     const handleHashChange = () => {
       const currentHash = window.location.hash.slice(1); // Remove o #
-      console.log("Hash detectado:", currentHash);
-      console.log("URL completa:", window.location.href);
       setHash(currentHash);
     };
 
-    // Executa imediatamente para capturar o hash inicial
-    console.log("Componente montado, hash inicial:", window.location.hash);
     handleHashChange();
 
-    // Escuta mudanças no hash
     window.addEventListener("hashchange", handleHashChange);
 
-    // Cleanup
     return () => {
       window.removeEventListener("hashchange", handleHashChange);
     };

@@ -3,13 +3,8 @@ import React from "react";
 import { Content } from "./Content";
 import { Profile } from "./Profile";
 import { Ticker } from "./Ticker";
-import { getCurrentSection } from "../utils/getCurrentSection";
 
 export function Hero() {
-  React.useEffect(() => {
-    getCurrentSection("hero");
-  }, []);
-
   return (
     <section
       id="hero"

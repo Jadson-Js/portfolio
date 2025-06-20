@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { getCurrentSection } from "../utils/getCurrentSection";
+import { getCurrentSection } from "../../utils/getCurrentSection";
 
 export function About() {
   React.useEffect(() => {

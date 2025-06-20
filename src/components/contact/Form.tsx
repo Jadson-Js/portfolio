@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import { FiSend } from "react-icons/fi";
 import { Thanks } from "./Thanks";
 
 export function Form() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(true);
+  const [isSubmitting, setIsSubmitting] = React.useState<boolean>(false);
+  const [isSubmitted, setIsSubmitted] = React.useState<boolean>(false);
+  const [message, setMessage] = React.useState<string>("");
+  const textAreaRef = React.useRef<HTMLTextAreaElement>(null);
+
+  const adjustHeight = () => {
+    const textarea = textAreaRef.current;
+    if (textarea) {
+      textarea.style.height = "auto";
+      textarea.style.height = textarea.scrollHeight + "px";
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,6 +45,10 @@ export function Form() {
       setIsSubmitting(false);
     }
   };
+
+  React.useEffect(() => {
+    adjustHeight();
+  }, [message]);
 
   return (
     <>
@@ -81,11 +95,15 @@ export function Form() {
           </label>
 
           <textarea
+            ref={textAreaRef}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             name="message"
             placeholder="Digite sua mensagem aqui"
-            className="focus:outline-none border-b border-primary pb-2 h-auto overflow-hidden"
+            className="focus:outline-none border-b border-primary pb-2  overflow-hidden"
             required
             disabled={isSubmitting}
+            rows={1}
           />
         </div>
 
