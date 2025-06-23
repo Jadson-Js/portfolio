@@ -6,64 +6,50 @@ import { IProject } from "@/types/IProject";
 export function useProjects() {
   const [projects] = React.useState<IProject[]>([
     {
-      title: "DevPortfolio",
-      subTitle: "Portfólio Pessoal",
-      imageUrl: "/project.jpg",
+      title: "Urbanify",
+      subTitle: "Sistema de gestão urbana",
+      imageUrl: "/urbanify_cover.png",
       description:
-        "Um site pessoal responsivo para mostrar meus projetos e experiência como desenvolvedor.",
-      tecnologies: ["React", "Tailwind CSS", "TypeScript"],
+        "Sistema completo incluindo Apps, Site e API. Permitia os cidadãos registrarem irregularidades com upload de fotos e geolocalização. A prefeitura acessava um dashboard interativo com gráficos em tempo real. Para garantir escalabilidade, o sistema utilizava tecnologia de hash nas coordenadas e contava com filas para envio automatizado de e-mails.",
+      tecnologies: [
+        "Javascript",
+        "Node.js",
+        "React",
+        "React Native",
+        "AWS",
+        "DynamoDB",
+        "S3",
+        "EC2",
+        "SNS",
+        "Lambda",
+        "JWT",
+        "OAuth2",
+      ],
       liveUrl: "https://meuportfolio.com",
-      githubUrl: "https://github.com/seuuser/dev-portfolio",
+      githubUrls: ["https://github.com/Jadson-Js/urbanify_backend", ""],
     },
     {
-      title: "TaskMaster",
-      subTitle: "Gerenciador de Tarefas",
+      title: "Cashbox",
+      subTitle: "App de gestão financeira pessoal",
       imageUrl: "/project.jpg",
       description:
-        "Aplicação web para criar, editar e acompanhar tarefas do dia a dia com login de usuário.",
-      tecnologies: ["Vue.js", "Firebase", "Pinia"],
+        "Esse projeto foi construído para ajudar usuários a gerenciar suas finanças pessoais de forma prática e intuitiva. O sistema permite o registro de despesas e receitas, categorização personalizada e geração de relatórios visuais. Implementei autenticação segura, TailwindCSS, integração com MySQL via Prisma e uma arquitetura de código modular seguindo boas práticas",
+      tecnologies: ["Typescript", "Node", "React Native", "Prisma", "JWT"],
       liveUrl: "https://taskmaster-app.web.app",
-      githubUrl: "https://github.com/seuuser/taskmaster",
+      githubUrls: [
+        "https://github.com/DiegoLeandro477/Urbanify_Web",
+        "https://github.com/Jadson-Js/cashbox_backend",
+      ],
     },
     {
-      title: "NutriCalc",
-      subTitle: "Calculadora Nutricional",
+      title: "Bikcraft",
+      subTitle: "Landing Page para Loja de Bicicletas",
       imageUrl: "/project.jpg",
       description:
-        "Ferramenta que gera planos alimentares com base em dados nutricionais e metas do usuário.",
-      tecnologies: ["Next.js", "Zustand", "Tailwind", "Prisma"],
-      liveUrl: "https://nutricalc.dev",
-      githubUrl: "https://github.com/seuuser/nutricalc",
-    },
-    {
-      title: "EcoMarket",
-      subTitle: "E-commerce Sustentável",
-      imageUrl: "/project.jpg",
-      description:
-        "Loja virtual com foco em produtos ecológicos, com carrinho, checkout e painel administrativo.",
-      tecnologies: ["React", "Redux Toolkit", "Node.js", "MongoDB"],
-      liveUrl: "https://ecomarket.shop",
-      githubUrl: "https://github.com/seuuser/ecomarket",
-    },
-    {
-      title: "DevChat",
-      subTitle: "Chat em Tempo Real",
-      imageUrl: "/project.jpg",
-      description:
-        "Aplicação de chat com autenticação e salas públicas e privadas, usando WebSockets.",
-      tecnologies: ["React", "Socket.IO", "Express", "PostgreSQL"],
-      liveUrl: "https://devchat.app",
-      githubUrl: "https://github.com/seuuser/devchat",
-    },
-    {
-      title: "ReportaAí",
-      subTitle: "Sistema de Denúncias Urbanas",
-      imageUrl: "/project.jpg",
-      description:
-        "Plataforma onde cidadãos podem reportar problemas em vias públicas, com gráficos e painel de atendimento.",
-      tecnologies: ["Vue.js", "TypeScript", "D3.js", "Django"],
-      liveUrl: "https://reportai.com",
-      githubUrl: "https://github.com/seuuser/reportai",
+        "Desafio pessoal focado em desenvolver uma e-commerce sem o uso de frameworks ou bibliotecas, utilizando apenas HTML5 e CSS3. A proposta simula a página de uma loja de bicicletas, com layout responsivo. Implementei seções como vitrine de produtos, fluxo de checkout visual, tudo desenvolvido na mão, reforçando minha atenção a detalhes e domínio da base da web.",
+      tecnologies: ["HTML", "CSS"],
+      liveUrl: "https://taskmaster-app.web.app",
+      githubUrls: ["https://github.com/Jadson-Js/bikcraft"],
     },
   ]);
 

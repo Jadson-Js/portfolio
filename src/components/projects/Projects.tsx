@@ -68,7 +68,7 @@ export function Projects() {
           </p>
         </div>
 
-        <div className="flex flex-row justify-center items-center gap-4 overflow-x-auto overflow-y-hidden pb-4 md:gap-8">
+        <div className="flex flex-row justify-start items-center gap-4 overflow-x-auto overflow-y-hidden pb-4 md:gap-8 xl:justify-center">
           <GrFormPrevious
             className="hidden xl:block text-5xl bg-bg1 rounded-full p-1 shrink-0 hover:bg-bg3 cursor-pointer transition-all"
             onClick={previous}

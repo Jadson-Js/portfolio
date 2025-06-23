@@ -5,5 +5,5 @@ export interface IProject {
   description: string;
   tecnologies: string[];
   liveUrl: string;
-  githubUrl: string;
+  githubUrls: string[];
 }
