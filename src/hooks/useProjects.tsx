@@ -51,6 +51,54 @@ export function useProjects() {
       liveUrl: "https://taskmaster-app.web.app",
       githubUrls: ["https://github.com/Jadson-Js/bikcraft"],
     },
+    {
+      title: "Dog",
+      subTitle: "Rede social nichada em imagens",
+      imageUrl: "/project.jpg",
+      description:
+        "Criei uma rede social onde os perfis, podem comentar, curtir fotos e interagir. Desenvolvi front e back-end com autenticação, feed, comentários e banco de dados. Projeto focado em experiência do usuário e boa estrutura de código.",
+      tecnologies: [
+        "Typescript",
+        "Node",
+        "Express",
+        "MongoDB",
+        "JWT",
+        "Mongoose",
+        "Next",
+        "TailwindCSS",
+      ],
+      liveUrl: "https://taskmaster-app.web.app",
+      githubUrls: ["https://github.com/Jadson-Js/dogs"],
+    },
+    {
+      title: "Modeva",
+      subTitle: "E-commerce",
+      imageUrl: "/project.jpg",
+      description:
+        "Desenvolvi um e-commerce completo para venda de roupas, com catálogo de produtos, carrinho, checkout com integração de pagamento e painel de administração. Atuei no front e back-end, focando em performance, usabilidade e segurança. Utilizei Clean Architecture, TDD, SOLID.",
+      tecnologies: [
+        "Typescript",
+        "Node",
+        "Express",
+        "MongoDB",
+        "JWT",
+        "Mongoose",
+        "Next",
+        "TailwindCSS",
+      ],
+      liveUrl: "https://taskmaster-app.web.app",
+      githubUrls: ["https://github.com/Jadson-Js/dogs"],
+    },
+    {
+      title: "TJ Company",
+      subTitle: "Landing Page - Agência de Fotografia",
+      imageUrl: "/project.jpg",
+      description:
+        "Criei uma landing page responsiva para uma agência de fotografia, com foco em conversão de clientes. Desenvolvi seções de portfólio, formulário de contato, integração com WhatsApp e animações leves para destacar os serviços.",
+      tecnologies: ["HTML", "TailwindCSS", "CSS", "Javascript"],
+      liveUrl: "https://taskmaster-app.web.app",
+      githubUrls: ["https://github.com/Jadson-Js/lp_tjcompany"],
+    },
   ]);
 
   return { projects };
