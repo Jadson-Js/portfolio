@@ -14,108 +14,98 @@ import { sectionsName } from "@/constants/sections";
 import React from "react";
 
 export default function Home() {
-  const lastScrollY = React.useRef(0);
-  const sectionTarget = React.useRef(0);
-  const [isMoving, setIsMoving] = React.useState({
-    status: false,
-    direction: 1,
-  });
   const [isMobile, setIsMobile] = React.useState(false);
+  const [currentSection, setCurrentSection] = React.useState(0);
+  const isWheelingRef = React.useRef(false);
+  const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
 
-  // Effect para detectar mudanças de tamanho de tela
+  // Efeito para detectar mudanças de tamanho de tela (pode manter o seu)
   React.useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 1024px)");
-
-    // Define o estado inicial
     setIsMobile(mediaQuery.matches);
-
-    // Handler para mudanças na media query
-    const handleMediaChange = (e: MediaQueryListEvent) => {
+    const handleMediaChange = (e: MediaQueryListEvent) =>
       setIsMobile(e.matches);
-    };
-
-    // Adiciona o listener
     mediaQuery.addEventListener("change", handleMediaChange);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaChange);
-    };
+    return () => mediaQuery.removeEventListener("change", handleMediaChange);
   }, []);
 
-  // Effect principal que depende do estado isMobile
+  // Efeito que gerencia o evento de 'wheel' (scroll do mouse)
   React.useEffect(() => {
+    // Se for mobile, a lógica customizada é desativada
     if (isMobile) {
-      // No mobile, restaura o scroll normal e remove listeners
       document.body.style.overflow = "auto";
       return;
     }
 
-    // No desktop, aplica a lógica de scroll personalizado
+    // No desktop, o overflow é escondido para controlarmos o scroll
     document.body.style.overflow = "hidden";
 
     const handleWheel = (e: WheelEvent) => {
-      const scrollY = e.deltaY;
-      const isTopScroll = scrollY < 0;
+      // Previne o comportamento padrão do scroll do navegador
+      e.preventDefault();
 
-      if (!isMoving.status) {
-        setIsMoving({
-          status: true,
-          direction: isTopScroll ? -1 : 1,
-        });
+      // Se um scroll já estiver em andamento (cooldown), ignora este evento
+      if (isWheelingRef.current) {
+        return;
+      }
 
-        lastScrollY.current = scrollY;
+      const direction = e.deltaY > 0 ? 1 : -1; // 1 para baixo, -1 para cima
+      const nextSection = currentSection + direction;
+
+      // Verifica se a próxima seção está dentro dos limites (de 0 a 4)
+      if (nextSection >= 0 && nextSection < sectionsName.length) {
+        setCurrentSection(nextSection);
+        isWheelingRef.current = true; // Ativa o cooldown para evitar scrolls múltiplos
       }
     };
 
     window.addEventListener("wheel", handleWheel, { passive: false });
 
+    // Função de limpeza para remover o listener
     return () => {
       window.removeEventListener("wheel", handleWheel);
+      document.body.style.overflow = "auto"; // Garante que o scroll normal seja restaurado
     };
-  }, [isMobile, isMoving.status]); // Agora depende de isMobile também
+  }, [isMobile, currentSection]); // O efeito depende de 'isMobile' e 'currentSection'
 
+  // Efeito que executa o scroll suave para a seção atual
   React.useEffect(() => {
-    if (!isMoving.status || isMobile) return; // Não executa no mobile
+    if (isMobile) return;
 
-    setTimeout(() => {
-      setIsMoving({
-        status: false,
-        direction: isMoving.direction,
-      });
-    }, 200);
+    const el = document.getElementById(sectionsName[currentSection]);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
 
-    if (
-      sectionTarget.current + isMoving.direction >= 0 &&
-      sectionTarget.current + isMoving.direction <= 4
-    ) {
-      sectionTarget.current += isMoving.direction;
+      // Limpa qualquer timeout anterior para garantir que apenas o último seja válido
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+
+      // Define um timeout para resetar o cooldown após a animação de scroll
+      timeoutRef.current = setTimeout(() => {
+        isWheelingRef.current = false;
+      }, 800); // 800ms é um bom tempo de espera para a animação terminar
     }
-  }, [isMoving.status, isMobile]);
 
-  React.useEffect(() => {
-    if (isMobile) return; // Não executa scroll personalizado no mobile
-
-    const el = document.getElementById(sectionsName[sectionTarget.current]);
-    if (!el) return;
-
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, [sectionTarget.current, isMobile]);
+    // Função de limpeza para o timeout
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, [currentSection, isMobile]); // Este efeito roda sempre que a seção alvo muda
 
   return (
     <>
       <Navbar />
       <main className="relative">
         <Hero />
-
         <About />
-
         <Projects />
-
         <Experiences />
-
         <Contact />
-
-        <Sidebar sectionTarget={sectionTarget} />
+        <Sidebar sectionTarget={{ current: currentSection }} />{" "}
+        {/* Passe o estado atual para a Sidebar */}
         <Whatsapp />
       </main>
       <Footer />

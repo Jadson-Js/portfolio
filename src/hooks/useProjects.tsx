@@ -42,6 +42,26 @@ export function useProjects() {
       ],
     },
     {
+      title: "Pronto Capacitação",
+      subTitle: "Landing Page - Treinamento De Segurança Do Trabalho",
+      imageUrl: "/project.jpg",
+      description:
+        "Criei uma landing page responsiva para uma agência de fotografia, com foco em conversão de clientes. Desenvolvi seções de portfólio, formulário de contato, integração com WhatsApp e animações leves para destacar os serviços.",
+      tecnologies: ["HTML", "TailwindCSS", "CSS", "Javascript"],
+      liveUrl: "https://taskmaster-app.web.app",
+      githubUrls: ["https://github.com/Jadson-Js/lp_tjcompany"],
+    },
+    {
+      title: "TJ Company",
+      subTitle: "Landing Page - Agência de Fotografia",
+      imageUrl: "/project.jpg",
+      description:
+        "Criei uma landing page responsiva para uma agência de fotografia, com foco em conversão de clientes. Desenvolvi seções de portfólio, formulário de contato, integração com WhatsApp e animações leves para destacar os serviços.",
+      tecnologies: ["HTML", "TailwindCSS", "CSS", "Javascript"],
+      liveUrl: "https://taskmaster-app.web.app",
+      githubUrls: ["https://github.com/Jadson-Js/lp_tjcompany"],
+    },
+    {
       title: "Bikcraft",
       subTitle: "Landing Page para Loja de Bicicletas",
       imageUrl: "/project.jpg",
@@ -71,11 +91,11 @@ export function useProjects() {
       githubUrls: ["https://github.com/Jadson-Js/dogs"],
     },
     {
-      title: "Modeva",
+      title: "Modeva (Em Andamento)",
       subTitle: "E-commerce",
       imageUrl: "/project.jpg",
       description:
-        "Desenvolvi um e-commerce completo para venda de roupas, com catálogo de produtos, carrinho, checkout com integração de pagamento e painel de administração. Atuei no front e back-end, focando em performance, usabilidade e segurança. Utilizei Clean Architecture, TDD, SOLID.",
+        "Desenvolvendo um e-commerce completo para venda de roupas, com catálogo de produtos, carrinho, checkout com integração de pagamento e painel de administração. Atuei no front e back-end, focando em performance, usabilidade e segurança. Utilizei Clean Architecture, TDD, SOLID.",
       tecnologies: [
         "Typescript",
         "Node",
@@ -87,17 +107,7 @@ export function useProjects() {
         "TailwindCSS",
       ],
       liveUrl: "https://taskmaster-app.web.app",
-      githubUrls: ["https://github.com/Jadson-Js/dogs"],
-    },
-    {
-      title: "TJ Company",
-      subTitle: "Landing Page - Agência de Fotografia",
-      imageUrl: "/project.jpg",
-      description:
-        "Criei uma landing page responsiva para uma agência de fotografia, com foco em conversão de clientes. Desenvolvi seções de portfólio, formulário de contato, integração com WhatsApp e animações leves para destacar os serviços.",
-      tecnologies: ["HTML", "TailwindCSS", "CSS", "Javascript"],
-      liveUrl: "https://taskmaster-app.web.app",
-      githubUrls: ["https://github.com/Jadson-Js/lp_tjcompany"],
+      githubUrls: ["https://github.com/Jadson-Js/modeva_backend"],
     },
   ]);
 
