@@ -1,9 +1,12 @@
 export interface IProject {
-  title: string;
-  subTitle: string;
   imageUrl: string;
-  description: string;
-  tecnologies: string[];
+  title: string;
+  subtitle: string;
+  overview: string;
+  features: string[];
+  challenge: string;
+  solution: string;
+  technologies: string[];
   liveUrl: string;
   githubUrls: string[];
 }

@@ -9,7 +9,7 @@ export function useExperiences() {
       company: "Saggita Digital",
       startDate: "Jul/23",
       endData: "Jan/24",
-      role: "Desenvolvedor No-Code (Júnior)",
+      role: "Desenvolvedor (Júnior)",
       description: [
         "Interfaces customizadas conforme requisitos.",
         "APIs e gateway de pagamento integrados.",
@@ -25,7 +25,7 @@ export function useExperiences() {
       company: "Digital Labs",
       startDate: "Mai/23",
       endData: "Jun/23",
-      role: "Desenvolvedor No-Code (Estágiario)",
+      role: "Desenvolvedor (Estágiario)",
       description: [
         "Funcionalidades críticas desenvolvidas e mantidas em produção.",
         "Resolução ágil de problemas com proatividade.",
