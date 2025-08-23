@@ -87,6 +87,70 @@ export function useProjects() {
         "https://github.com/SeuUsuario/urbanify_frontend",
       ],
     },
+    {
+      imageUrl: "/tj_company_cover.png",
+      title: "TJ Company: Empreendedorismo e Tecnologia na Fotografia",
+      subtitle:
+        "Cofundador e líder técnico de uma agência de fotografia, responsável por desenvolver a tecnologia que otimiza a gestão e a captação de clientes.",
+      overview:
+        "Como um dos sócios fundadores da TJ Company, atuo como a força motriz por trás de toda a tecnologia da agência. Minha responsabilidade é conceber e desenvolver soluções digitais que nos diferenciam no mercado, desde a prospecção de clientes até a gestão interna. Lidero ativamente a iniciativa de transformar um negócio tradicional de fotografia em uma operação moderna e escalável através da inovação.",
+      challenge:
+        "O principal desafio foi empreender em um mercado competitivo com recursos financeiros limitados e sem uma vasta experiência prévia em gestão de negócios. Era crucial encontrar uma maneira de validar nossas ideias de forma rápida e barata, minimizando os riscos e maximizando o aprendizado.",
+      solution:
+        "Adotei princípios de gestão empresarial ágil, inspirados em metodologias como a do livro 'A Startup Enxuta'. Criei um processo interno para validar nossas hipóteses de negócio com baixo custo. O primeiro passo prático foi desenvolver uma Landing Page de alta conversão para captar os primeiros clientes. Atualmente, estou liderando o desenvolvimento de um CRM proprietário, projetado do zero e baseado nas melhores ferramentas do mercado internacional, mas totalmente customizado para as necessidades e o fluxo de trabalho do mercado fotográfico.",
+      features: [
+        "Metodologia de Validação Ágil: Aplicação de conceitos de Lean Startup para testar e iterar sobre as ideias de negócio com eficiência.",
+        "Landing Page de Captação: Portal web focado em conversão para apresentar os serviços e gerar leads qualificados.",
+        "CRM Customizado para Fotógrafos: Sistema de gestão em desenvolvimento, projetado para otimizar o fluxo de trabalho, desde o primeiro contato até a entrega final ao cliente.",
+        "Liderança Técnica e de Produto: Responsável pela visão estratégica, concepção e execução de todas as ferramentas tecnológicas da agência.",
+      ],
+      technologies: ["HTML", "CSS", "Javascript"],
+      liveUrl: "https://sua-agencia.com",
+      githubUrls: ["https://github.com/SeuUsuario/tj-company-crm", ""],
+    },
+    {
+      imageUrl: "/cashbox_cover.png",
+      title: "Cashbox: Aplicativo de Gestão Financeira Pessoal",
+      subtitle:
+        "Aplicativo mobile de estudo para planejamento financeiro, desenvolvido com React Native e TypeScript.",
+      overview:
+        "Cashbox é um projeto de estudo concebido para aplicar e aprofundar meus conhecimentos em desenvolvimento mobile. O aplicativo permite que o usuário realize um planejamento financeiro completo, registrando suas receitas e despesas de forma intuitiva e visualizando sua saúde financeira através de um dashboard interativo.",
+      challenge:
+        "O principal desafio foi a produção de um aplicativo mobile utilizando uma stack tecnológica com a qual eu não tinha domínio prévio: React Native e TypeScript. O objetivo era sair da zona de conforto e aprender a construir uma aplicação robusta e tipada do zero.",
+      solution:
+        "Dediquei-me a um período de estudo focado na documentação oficial e em boas práticas de mercado para ambas as tecnologias. Desenvolvi o projeto de forma incremental, aplicando os conceitos aprendidos na prática para construir cada funcionalidade, desde a estrutura inicial até a implementação de um sistema de autenticação seguro.",
+      features: [
+        "CRUD Financeiro Completo: O usuário pode criar, ler, atualizar e deletar todas as suas transações financeiras (receitas e despesas).",
+        "Dashboard Interativo: Gráficos e resumos visuais que apresentam o balanço financeiro do usuário de forma clara e objetiva.",
+        "Autenticação Segura com JWT: Sistema de cadastro e login de usuários utilizando JSON Web Tokens, com implementação de refresh token para manter o usuário conectado de forma segura.",
+        "Interface Intuitiva: Foco em uma experiência de usuário limpa e direta para facilitar a gestão das finanças no dia a dia.",
+      ],
+      technologies: ["React Native", "TypeScript", "Styled-Components"],
+      liveUrl: "",
+      githubUrls: ["https://github.com/SeuUsuario/cashbox-app", ""],
+    },
+    {
+      imageUrl: "/bikcraft_cover.png",
+      title: "Bikcraft: Website Responsivo para Bicicletas Customizadas",
+      subtitle:
+        "Projeto de estudo baseado no renomado curso da Origamid, focado em HTML semântico, CSS avançado e JavaScript para interatividade.",
+      overview:
+        "Desenvolvi uma versão completa do website Bikcraft, um projeto amplamente reconhecido na comunidade de desenvolvimento front-end. A aplicação é uma vitrine digital para uma marca de bicicletas elétricas personalizadas, com páginas detalhadas para produtos, seguros, e contato. O foco foi construir uma interface pixel-perfect, responsiva e com código limpo e bem estruturado.",
+      challenge:
+        "O desafio principal foi aplicar com precisão os fundamentos do desenvolvimento web moderno. Isso incluiu a estruturação correta do conteúdo com HTML semântico, a criação de layouts complexos e fluidos utilizando CSS Grid e Flexbox, e a adição de interatividade de forma performática com JavaScript puro, sem o uso de frameworks.",
+      solution:
+        "Seguindo as melhores práticas ensinadas, construí cada componente do zero. Utilizei HTML5 para garantir a semântica e acessibilidade. O CSS foi organizado de forma modular, com uso intensivo de Grid Layout e Flexbox para total controle sobre o design responsivo. O JavaScript foi implementado para manipular o DOM, criando funcionalidades como um menu mobile, uma galeria de imagens interativa e um sistema de navegação suave (smooth scrolling).",
+      features: [
+        "Design Totalmente Responsivo: Experiência de usuário consistente e otimizada para desktops, tablets e smartphones.",
+        "HTML5 Semântico: Código bem estruturado que melhora o SEO e a acessibilidade da página.",
+        "CSS Avançado: Layouts complexos construídos com CSS Grid e Flexbox, demonstrando domínio das ferramentas de posicionamento modernas.",
+        "Interatividade com JavaScript Puro: Funcionalidades como galeria de imagens, menu mobile e animações, desenvolvidas sem dependência de bibliotecas externas.",
+        "Otimização de Performance: Foco em carregar apenas os assets necessários para garantir um site rápido e eficiente.",
+      ],
+      technologies: ["HTML", "CSS", "Javascript"],
+      liveUrl: "https://seusite.com/bikcraft",
+      githubUrls: ["https://github.com/SeuUsuario/bikcraft-projeto", ""],
+    },
   ]);
 
   return { projects };
