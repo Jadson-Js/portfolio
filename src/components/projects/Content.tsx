@@ -58,7 +58,7 @@ export function Content({ project, setProject }: ContentProps) {
 
         {/* 2. CONTEÚDO PRINCIPAL (com scroll) */}
         {/* Adicionado 'overflow-y-auto' para criar a barra de rolagem quando necessário */}
-        <main className="flex-1 flex flex-col gap-8 px-4 py-2 overflow-y-auto">
+        <main className="flex-1 flex flex-col gap-8 px-4 py-8 overflow-y-auto">
           <div className="flex flex-col gap-2">
             <h3 className="text-2xl">{project.title}</h3>
             <p className="text-gray-400">{project.subtitle}</p>

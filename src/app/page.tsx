@@ -42,7 +42,9 @@ export default function Home() {
 
     const handleWheel = (e: WheelEvent) => {
       // Previne o comportamento padrão do scroll do navegador
-      e.preventDefault();
+
+      /* CONDIÇÃO: Quando sidebar do projeto for ativo, desative o e.preventDefault */
+      //e.preventDefault();
 
       // Se um scroll já estiver em andamento (cooldown), ignora este evento
       if (isWheelingRef.current) {
@@ -69,6 +71,7 @@ export default function Home() {
   }, [isMobile, currentSection]); // O efeito depende de 'isMobile' e 'currentSection'
 
   // Efeito que executa o scroll suave para a seção atual
+  /* CONDIÇÃO: Quando sidebar do projeto for ativo, desative este useEffect */
   React.useEffect(() => {
     if (isMobile) return;
 
