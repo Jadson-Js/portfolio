@@ -5,7 +5,7 @@ import { IProject } from "@/types/IProject";
 
 export function useProjects() {
   const [projects] = React.useState<IProject[]>([
-    {
+    /* {
       thumbnail: "/urbanify_cover.png",
       video: "/urbanify_video.mp4",
       title: "Dev Space: Blog com SEO e Performance Máximas",
@@ -26,7 +26,7 @@ export function useProjects() {
       technologies: ["HTML", "Javascript", "Framework CSS Próprio", "Astro"],
       live: "https://meuportfolio.com",
       github: ["https://github.com/Jadson-Js/urbanify_backend", ""],
-    },
+    }, */
     {
       thumbnail: "/project_prontocapacitacao_thumbnail.png",
       video: "/project_prontocapacitacao_video.mp4",
@@ -49,7 +49,7 @@ export function useProjects() {
       technologies: ["HTML", "CSS", "Javascript"],
       live: "https://prontocapacitacao.com.br/",
     },
-    {
+    /* {
       thumbnail: "/urbanify_cover.png",
       title: "Urbanify – Plataforma Cívica Inteligente",
       subtitle:
@@ -87,7 +87,7 @@ export function useProjects() {
         "https://github.com/SeuUsuario/urbanify_backend",
         "https://github.com/SeuUsuario/urbanify_frontend",
       ],
-    },
+    }, */
     {
       thumbnail: "/project_tjcompany_thumbnail.png",
       video: "/project_tjcompany_video.mp4",
@@ -111,7 +111,8 @@ export function useProjects() {
       github: ["https://github.com/Jadson-Js/tj_company"],
     },
     {
-      thumbnail: "/cashbox_cover.png",
+      thumbnail: "/project_cashbox_thumbnail.png",
+      video: "/project_cashbox_video.mp4",
       title: "Cashbox: Aplicativo de Gestão Financeira Pessoal",
       subtitle:
         "Aplicativo mobile de estudo para planejamento financeiro, desenvolvido com React Native e TypeScript.",
@@ -128,11 +129,15 @@ export function useProjects() {
         "Interface Intuitiva: Foco em uma experiência de usuário limpa e direta para facilitar a gestão das finanças no dia a dia.",
       ],
       technologies: ["React Native", "TypeScript", "Styled-Components"],
-      live: "",
-      github: ["https://github.com/SeuUsuario/cashbox-app", ""],
+      //live: "",
+      github: [
+        "https://github.com/Jadson-Js/cashbox_frontend",
+        "https://github.com/Jadson-Js/cashbox_backend",
+      ],
     },
     {
-      thumbnail: "/bikcraft_cover.png",
+      thumbnail: "/project_bikcraft_thumbnail.png",
+      video: "/project_bikcraft_video.mp4",
       title: "Bikcraft: Website Responsivo para Bicicletas Customizadas",
       subtitle:
         "Projeto de estudo baseado no renomado curso da Origamid, focado em HTML semântico, CSS avançado e JavaScript para interatividade.",
@@ -150,8 +155,8 @@ export function useProjects() {
         "Otimização de Performance: Foco em carregar apenas os assets necessários para garantir um site rápido e eficiente.",
       ],
       technologies: ["HTML", "CSS", "Javascript"],
-      live: "https://seusite.com/bikcraft",
-      github: ["https://github.com/SeuUsuario/bikcraft-projeto", ""],
+      live: "https://jadson-js.github.io/bikcraft/",
+      github: ["https://github.com/Jadson-Js/bikcraft"],
     },
   ]);
 

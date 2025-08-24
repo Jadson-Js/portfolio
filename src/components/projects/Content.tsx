@@ -94,14 +94,14 @@ export function Content() {
             </ul>
           </div>
 
-          <div className="flex flex-col gap-2">
-            <div className="flex flex-row items-center gap-1 text-lg">
-              <FaGithub />
-              <h3 className="text-lg">GitHub</h3>
-            </div>
-            <ul className="flex flex-col gap-1">
-              {project.github &&
-                project.github.map((url) => {
+          {project.github && (
+            <div className="flex flex-col gap-2">
+              <div className="flex flex-row items-center gap-1 text-lg">
+                <FaGithub />
+                <h3 className="text-lg">GitHub</h3>
+              </div>
+              <ul className="flex flex-col gap-1">
+                {project.github.map((url) => {
                   return (
                     <li key={url}>
                       <Link href={url} target="_blank">
@@ -112,22 +112,25 @@ export function Content() {
                     </li>
                   );
                 })}
-            </ul>
-          </div>
+              </ul>
+            </div>
+          )}
         </main>
 
         {/* 3. RODAPÉ (não rola) */}
-        <footer className="w-full bg-bg3 border-t-1 border-x-1 border-t-primary border-x-primary p-4 text-center rounded-tl-3xl rounded-tr-3xl">
-          {/* Usar <a> se for um link ou <button> se for uma ação */}
-          <a
-            href={project.live} // Supondo que você tenha a URL do projeto
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full" // 'block' para o link ocupar todo o espaço do pai
-          >
-            <h4>Abrir Projeto</h4>
-          </a>
-        </footer>
+        {project.live && (
+          <footer className="w-full bg-bg3 border-t-1 border-x-1 border-t-primary border-x-primary p-4 text-center rounded-tl-3xl rounded-tr-3xl">
+            {/* Usar <a> se for um link ou <button> se for uma ação */}
+            <a
+              href={project.live} // Supondo que você tenha a URL do projeto
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full" // 'block' para o link ocupar todo o espaço do pai
+            >
+              <h4>Abrir Projeto</h4>
+            </a>
+          </footer>
+        )}
       </section>
     </>
   );
