@@ -25,7 +25,7 @@ export function Navbar() {
             <Link
               href={"https://www.linkedin.com/in/jadson-abreu/"}
               target="_blank"
-              className="flex flex-row items-center gap-1"
+              className="flex flex-row items-center gap-1 hover:scale-105 transition-transform"
             >
               <FaLinkedin className="text-primary text-lg" />
               <p className="text-slate-200">LinkedIn</p>
@@ -34,7 +34,7 @@ export function Navbar() {
           <li>
             <Link
               href={"/CV.pdf"}
-              className="flex flex-row items-center gap-1"
+              className="flex flex-row items-center gap-1 hover:scale-105 transition-transform"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -46,7 +46,7 @@ export function Navbar() {
             <Link
               href={"https://github.com/Jadson-Js/"}
               target="_blank"
-              className="flex flex-row items-center gap-1"
+              className="flex flex-row items-center gap-1 hover:scale-105 transition-transform"
             >
               <FaSquareGithub className="text-primary text-lg" />
               <p className="text-slate-200">Github</p>
@@ -58,7 +58,7 @@ export function Navbar() {
                 "https://wa.me/5598983507939?text=Ol%C3%A1%2C+vi+seu+portf%C3%B3lio+e+gostaria+de+conversar+com+voc%C3%AA."
               }
               target="_blank"
-              className="flex flex-row items-center gap-1"
+              className="flex flex-row items-center gap-1 hover:scale-105 transition-transform"
             >
               <FaPhoneSquareAlt className="text-primary text-lg" />
               <p className="text-slate-200 overflow-hidden whitespace-nowrap text-ellipsis">

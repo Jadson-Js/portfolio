@@ -30,18 +30,18 @@ export function Footer() {
               <Link
                 href={"https://www.linkedin.com/in/jadson-abreu/"}
                 target="_blank"
-                className="flex flex-row items-center gap-1"
+                className="flex flex-row items-center gap-1 group"
               >
-                <FaLinkedin className="text-primary text-3xl" />
+                <FaLinkedin className="text-primary text-3xl hover:text-primary-dark transition-all" />
               </Link>
             </li>
             <li>
               <Link
                 href={"https://github.com/Jadson-Js/"}
                 target="_blank"
-                className="flex flex-row items-center gap-1"
+                className="flex flex-row items-center gap-1 group"
               >
-                <FaSquareGithub className="text-primary text-3xl" />
+                <FaSquareGithub className="text-primary text-3xl hover:text-primary-dark transition-all" />
               </Link>
             </li>
             <li>
@@ -50,9 +50,9 @@ export function Footer() {
                   "https://wa.me/5598983507939?text=Ol%C3%A1%2C+vi+seu+portf%C3%B3lio+e+gostaria+de+conversar+com+voc%C3%AA."
                 }
                 target="_blank"
-                className="flex flex-row items-center gap-1"
+                className="flex flex-row items-center gap-1 group"
               >
-                <FaPhoneSquareAlt className="text-primary text-3xl" />
+                <FaPhoneSquareAlt className="text-primary text-3xl hover:text-primary-dark transition-all" />
               </Link>
             </li>
           </ul>

@@ -10,7 +10,7 @@ export function Whatsapp() {
       target="_blank"
       className="fixed bottom-10 right-8 md:bottom-20 md:right-20 z-10"
     >
-      <IoLogoWhatsapp className="text-primary text-5xl" />
+      <IoLogoWhatsapp className=" text-primary text-5xl hover:text-primary-dark transition-all " />
     </Link>
   );
 }

@@ -111,7 +111,7 @@ export function Form() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="bg-primary text-gray-800 flex flex-row gap-4 px-8 py-4 rounded-4xl cursor-pointer uppercase hover:bg-b1 transition-all w-fit disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-primary text-gray-800 flex flex-row gap-4 px-8 py-4 rounded-4xl cursor-pointer uppercase hover:bg-b1 transition-all w-fit disabled:opacity-50 disabled:cursor-not-allowed hover:bg-primary-dark"
           >
             {isSubmitting ? "Enviando..." : "Enviar"}
             <FiSend className="text-2xl" />

@@ -2,6 +2,7 @@
 
 :root {
   --primary: #98faec;
+  --primary-dark: #78c8d8;
   --bg1: #292f36;
   --bg2: #43454d;
   --bg3: #1a1e23;
@@ -10,6 +11,7 @@
 
 @theme inline {
   --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
   --color-bg1: var(--bg1);
   --color-bg2: var(--bg2);
   --color-bg3: var(--bg3);

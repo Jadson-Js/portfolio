@@ -24,7 +24,7 @@ export function Content() {
       </div>
 
       <button
-        className="flex flex-row flex-nowrap items-center gap-2 cursor-pointer"
+        className="flex flex-row flex-nowrap items-center gap-2 cursor-pointer hover:scale-105 transition-transform self-start"
         onClick={() => scroll("contact")}
       >
         <h3 className="text-primary text-2xl">Vamos Conversar?</h3>
