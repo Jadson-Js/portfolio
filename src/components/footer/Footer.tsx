@@ -37,16 +37,6 @@ export function Footer() {
             </li>
             <li>
               <Link
-                href={"/CV.pdf"}
-                className="flex flex-row items-center gap-1"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <IoDocumentTextSharp className="text-primary text-3xl" />
-              </Link>
-            </li>
-            <li>
-              <Link
                 href={"https://github.com/Jadson-Js/"}
                 target="_blank"
                 className="flex flex-row items-center gap-1"
@@ -63,11 +53,6 @@ export function Footer() {
                 className="flex flex-row items-center gap-1"
               >
                 <FaPhoneSquareAlt className="text-primary text-3xl" />
-              </Link>
-            </li>
-            <li>
-              <Link href={"#"} className="flex flex-row items-center gap-1">
-                <MdEmail className="text-primary text-3xl" />
               </Link>
             </li>
           </ul>

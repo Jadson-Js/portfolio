@@ -66,14 +66,6 @@ export function Navbar() {
               </p>
             </Link>
           </li>
-          <li>
-            <Link href={"#"} className="flex flex-row items-center gap-1">
-              <MdEmail className="text-primary text-lg" />
-              <p className="text-slate-200 overflow-hidden whitespace-nowrap text-ellipsis flex-1">
-                email
-              </p>
-            </Link>
-          </li>
         </ul>
       </nav>
     </header>

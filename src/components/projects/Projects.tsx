@@ -12,7 +12,7 @@ import { getCurrentSection } from "../../utils/getCurrentSection";
 import { useProject } from "@/context/ProjectContext";
 
 export function Projects() {
-  const { project, setProject } = useProject();
+  const { setProject } = useProject();
   const { projects } = useProjects();
   const { paginatedItems, next, previous, currentPage } = usePagination(
     projects,
@@ -83,7 +83,7 @@ export function Projects() {
           />
         </div>
 
-        <Content project={project} setProject={setProject} />
+        <Content />
       </div>
     </section>
   );

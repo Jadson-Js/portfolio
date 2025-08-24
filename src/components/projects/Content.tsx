@@ -1,37 +1,13 @@
+import { useProject } from "@/context/ProjectContext";
 import { IProject } from "@/types/IProject";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { GrFormPrevious } from "react-icons/gr";
 
-interface ContentProps {
-  project: IProject | null;
-  setProject: (value: null) => void;
-}
+export function Content() {
+  const { project, setProject } = useProject();
 
-export function Content({ project, setProject }: ContentProps) {
   if (!project) return null;
-
-  const Tecnologies = project.technologies.map((title, index) => {
-    return (
-      <li key={index}>
-        <span className="text-xs uppercase rounded-3xl bg-bg3 px-2 py-1 border border-white">
-          {title}
-        </span>
-      </li>
-    );
-  });
-
-  const Github = project.githubUrls.map((url) => {
-    return (
-      <li key={url}>
-        <Link href={url} target="_blank">
-          <p className="text-gray-400 text-sm hover:text-primary transition-all">
-            {url}
-          </p>
-        </Link>
-      </li>
-    );
-  });
 
   return (
     <>
@@ -106,7 +82,17 @@ export function Content({ project, setProject }: ContentProps) {
 
           <div className="flex flex-col gap-2">
             <h3 className="text-lg">Tecnologias</h3>
-            <ul className="flex flex-row gap-2 flex-wrap">{Tecnologies}</ul>
+            <ul className="flex flex-row gap-2 flex-wrap">
+              {project.technologies.map((title, index) => {
+                return (
+                  <li key={index}>
+                    <span className="text-xs uppercase rounded-3xl bg-bg3 px-2 py-1 border border-white">
+                      {title}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
 
           <div className="flex flex-col gap-2">
@@ -114,7 +100,19 @@ export function Content({ project, setProject }: ContentProps) {
               <FaGithub />
               <h3 className="text-lg">GitHub</h3>
             </div>
-            <ul className="flex flex-col gap-1">{Github}</ul>
+            <ul className="flex flex-col gap-1">
+              {project.githubUrls.map((url) => {
+                return (
+                  <li key={url}>
+                    <Link href={url} target="_blank">
+                      <p className="text-gray-400 text-sm hover:text-primary transition-all">
+                        {url}
+                      </p>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </main>
 

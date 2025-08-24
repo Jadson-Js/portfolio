@@ -45,8 +45,7 @@ export default function Home() {
     const handleWheel = (e: WheelEvent) => {
       // Previne o comportamento padrão do scroll do navegador
 
-      /* CONDIÇÃO: Quando sidebar do projeto for ativo, desative o e.preventDefault */
-      //e.preventDefault();
+      //  e.preventDefault();
 
       // Se um scroll já estiver em andamento (cooldown), ignora este evento
       if (isWheelingRef.current) {
@@ -63,17 +62,17 @@ export default function Home() {
       }
     };
 
-    window.addEventListener("wheel", handleWheel, { passive: false });
-
+    if (!project) {
+      window.addEventListener("wheel", handleWheel, { passive: false });
+    }
     // Função de limpeza para remover o listener
     return () => {
       window.removeEventListener("wheel", handleWheel);
       document.body.style.overflow = "auto"; // Garante que o scroll normal seja restaurado
     };
-  }, [isMobile, currentSection]); // O efeito depende de 'isMobile' e 'currentSection'
+  }, [isMobile, currentSection, project]); // O efeito depende de 'isMobile' e 'currentSection'
 
   // Efeito que executa o scroll suave para a seção atual
-  /* CONDIÇÃO: Quando sidebar do projeto for ativo, desative este useEffect */
   React.useEffect(() => {
     if (isMobile || project) return;
 
@@ -89,7 +88,7 @@ export default function Home() {
       // Define um timeout para resetar o cooldown após a animação de scroll
       timeoutRef.current = setTimeout(() => {
         isWheelingRef.current = false;
-      }, 800); // 800ms é um bom tempo de espera para a animação terminar
+      }, 100); // 800ms é um bom tempo de espera para a animação terminar
     }
 
     // Função de limpeza para o timeout
