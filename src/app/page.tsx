@@ -10,10 +10,12 @@ import { Projects } from "@/components/projects/Projects";
 import { Sidebar } from "@/components/Sidebar";
 import { Whatsapp } from "@/components/Whatsapp";
 import { sectionsName } from "@/constants/sections";
+import { useProject } from "@/context/ProjectContext";
 
 import React from "react";
 
 export default function Home() {
+  const { project } = useProject();
   const [isMobile, setIsMobile] = React.useState(false);
   const [currentSection, setCurrentSection] = React.useState(0);
   const isWheelingRef = React.useRef(false);
@@ -73,7 +75,7 @@ export default function Home() {
   // Efeito que executa o scroll suave para a seção atual
   /* CONDIÇÃO: Quando sidebar do projeto for ativo, desative este useEffect */
   React.useEffect(() => {
-    if (isMobile) return;
+    if (isMobile || project) return;
 
     const el = document.getElementById(sectionsName[currentSection]);
     if (el) {
@@ -96,7 +98,7 @@ export default function Home() {
         clearTimeout(timeoutRef.current);
       }
     };
-  }, [currentSection, isMobile]); // Este efeito roda sempre que a seção alvo muda
+  }, [currentSection, isMobile, project]); // Este efeito roda sempre que a seção alvo muda
 
   return (
     <>

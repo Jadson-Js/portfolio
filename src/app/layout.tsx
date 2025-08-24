@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import { ProjectProvider } from "@/context/ProjectContext";
 
 const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-ibm-plex-mono",
@@ -20,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${ibmPlexMono.variable} antialiased`}>{children}</body>
+      <body className={`${ibmPlexMono.variable} antialiased`}>
+        <ProjectProvider>{children}</ProjectProvider>
+      </body>
     </html>
   );
 }

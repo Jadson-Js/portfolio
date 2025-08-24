@@ -8,16 +8,16 @@ import React from "react";
 import { useProjects } from "@/hooks/useProjects";
 import { usePagination } from "@/hooks/usePagination";
 import { Content } from "./Content";
-import { IProject } from "@/types/IProject";
 import { getCurrentSection } from "../../utils/getCurrentSection";
+import { useProject } from "@/context/ProjectContext";
 
 export function Projects() {
+  const { project, setProject } = useProject();
   const { projects } = useProjects();
   const { paginatedItems, next, previous, currentPage } = usePagination(
     projects,
     3,
   );
-  const [project, setProject] = React.useState<IProject | null>(null);
 
   const projectsMobile = () => {
     return projects.map((project, index) => (
