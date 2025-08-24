@@ -9,9 +9,9 @@ export function Card({
 }) {
   return (
     <div
-      className={`min-w-70 h-80 bg-yellow-500 rounded-3xl flex-1 cursor-pointer transition-all relative group ${className}`}
+      className={`w-full h-80 bg-yellow-500 rounded-xl flex-1 cursor-pointer transition-all relative group ${className}`}
       style={{
-        backgroundImage: `url(${project.imageUrl})`,
+        backgroundImage: `url(${project.thumbnail})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",

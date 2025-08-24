@@ -6,7 +6,8 @@ import { IProject } from "@/types/IProject";
 export function useProjects() {
   const [projects] = React.useState<IProject[]>([
     {
-      imageUrl: "/urbanify_cover.png",
+      thumbnail: "/urbanify_cover.png",
+      video: "/urbanify_video.mp4",
       title: "Dev Space: Blog com SEO e Performance Máximas",
       subtitle:
         "Plataforma de conteúdo com foco em performance, SEO e independência tecnológica, usando Astro e um framework CSS proprietário.",
@@ -23,11 +24,12 @@ export function useProjects() {
         "Design Responsivo: Interface limpa e acessível, perfeita em qualquer dispositivo.",
       ],
       technologies: ["HTML", "Javascript", "Framework CSS Próprio", "Astro"],
-      liveUrl: "https://meuportfolio.com",
-      githubUrls: ["https://github.com/Jadson-Js/urbanify_backend", ""],
+      live: "https://meuportfolio.com",
+      github: ["https://github.com/Jadson-Js/urbanify_backend", ""],
     },
     {
-      imageUrl: "/urbanify_cover.png",
+      thumbnail: "/project_prontocapacitacao_thumbnail.png",
+      video: "/project_prontocapacitacao_video.mp4",
       title: "Pronto Capacitação: Landing Page Adaptativa de Alta Conversão",
       subtitle:
         "Landing Page de alta performance para cliente de treinamentos, com design e conteúdo dinamicamente adaptáveis para públicos B2B e B2C.",
@@ -45,11 +47,10 @@ export function useProjects() {
         "FAQ Interativo: Seção de perguntas frequentes para sanar dúvidas e reduzir a fricção na jornada do cliente.",
       ],
       technologies: ["HTML", "CSS", "Javascript"],
-      liveUrl: "https://seusite.com/pronto-capacitacao",
-      githubUrls: ["https://github.com/SeuUsuario/pronto-capacitacao", ""],
+      live: "https://prontocapacitacao.com.br/",
     },
     {
-      imageUrl: "/urbanify_cover.png",
+      thumbnail: "/urbanify_cover.png",
       title: "Urbanify – Plataforma Cívica Inteligente",
       subtitle:
         "API, Web e Mobile para relatos urbanos com geolocalização, dashboard analítico e controle de custos na AWS.",
@@ -81,14 +82,15 @@ export function useProjects() {
         "JWT",
         "OAuth2",
       ],
-      liveUrl: "https://meuportfolio.com/urbanify",
-      githubUrls: [
+      live: "https://meuportfolio.com/urbanify",
+      github: [
         "https://github.com/SeuUsuario/urbanify_backend",
         "https://github.com/SeuUsuario/urbanify_frontend",
       ],
     },
     {
-      imageUrl: "/tj_company_cover.png",
+      thumbnail: "/project_tjcompany_thumbnail.png",
+      video: "/project_tjcompany_video.mp4",
       title: "TJ Company: Empreendedorismo e Tecnologia na Fotografia",
       subtitle:
         "Cofundador e líder técnico de uma agência de fotografia, responsável por desenvolver a tecnologia que otimiza a gestão e a captação de clientes.",
@@ -105,11 +107,11 @@ export function useProjects() {
         "Liderança Técnica e de Produto: Responsável pela visão estratégica, concepção e execução de todas as ferramentas tecnológicas da agência.",
       ],
       technologies: ["HTML", "CSS", "Javascript"],
-      liveUrl: "https://sua-agencia.com",
-      githubUrls: ["https://github.com/SeuUsuario/tj-company-crm", ""],
+      live: "https://jadson-js.github.io/tj_company/dist/",
+      github: ["https://github.com/Jadson-Js/tj_company"],
     },
     {
-      imageUrl: "/cashbox_cover.png",
+      thumbnail: "/cashbox_cover.png",
       title: "Cashbox: Aplicativo de Gestão Financeira Pessoal",
       subtitle:
         "Aplicativo mobile de estudo para planejamento financeiro, desenvolvido com React Native e TypeScript.",
@@ -126,11 +128,11 @@ export function useProjects() {
         "Interface Intuitiva: Foco em uma experiência de usuário limpa e direta para facilitar a gestão das finanças no dia a dia.",
       ],
       technologies: ["React Native", "TypeScript", "Styled-Components"],
-      liveUrl: "",
-      githubUrls: ["https://github.com/SeuUsuario/cashbox-app", ""],
+      live: "",
+      github: ["https://github.com/SeuUsuario/cashbox-app", ""],
     },
     {
-      imageUrl: "/bikcraft_cover.png",
+      thumbnail: "/bikcraft_cover.png",
       title: "Bikcraft: Website Responsivo para Bicicletas Customizadas",
       subtitle:
         "Projeto de estudo baseado no renomado curso da Origamid, focado em HTML semântico, CSS avançado e JavaScript para interatividade.",
@@ -148,8 +150,8 @@ export function useProjects() {
         "Otimização de Performance: Foco em carregar apenas os assets necessários para garantir um site rápido e eficiente.",
       ],
       technologies: ["HTML", "CSS", "Javascript"],
-      liveUrl: "https://seusite.com/bikcraft",
-      githubUrls: ["https://github.com/SeuUsuario/bikcraft-projeto", ""],
+      live: "https://seusite.com/bikcraft",
+      github: ["https://github.com/SeuUsuario/bikcraft-projeto", ""],
     },
   ]);
 

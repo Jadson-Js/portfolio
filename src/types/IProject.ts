@@ -1,5 +1,6 @@
 export interface IProject {
-  imageUrl: string;
+  thumbnail: string;
+  video: string;
   title: string;
   subtitle: string;
   overview: string;
@@ -7,6 +8,6 @@ export interface IProject {
   challenge: string;
   solution: string;
   technologies: string[];
-  liveUrl: string;
-  githubUrls: string[];
+  live?: string;
+  github?: string[];
 }

@@ -40,17 +40,16 @@ export function Content() {
             <p className="text-gray-400">{project.subtitle}</p>
           </div>
 
-          <div
-            className="max-h-50 bg-primary rounded-3xl flex-1 cursor-pointer min-h-[200px]" // min-h para garantir altura mínima
-            style={{
-              backgroundImage: `url(${project.imageUrl})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-            aria-label={`Imagem do projeto ${project.title}`}
-            role="img"
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={`min-w-70 h-80  rounded-xl flex-1 cursor-pointer transition-all relative group`}
+          >
+            <source src={project.video} type="video/mp4" />
+            Seu navegador não suporta vídeos.
+          </video>
 
           <article className="flex flex-col gap-2">
             <h3 className="text-lg">Sobre</h3>
@@ -101,17 +100,18 @@ export function Content() {
               <h3 className="text-lg">GitHub</h3>
             </div>
             <ul className="flex flex-col gap-1">
-              {project.githubUrls.map((url) => {
-                return (
-                  <li key={url}>
-                    <Link href={url} target="_blank">
-                      <p className="text-gray-400 text-sm hover:text-primary transition-all">
-                        {url}
-                      </p>
-                    </Link>
-                  </li>
-                );
-              })}
+              {project.github &&
+                project.github.map((url) => {
+                  return (
+                    <li key={url}>
+                      <Link href={url} target="_blank">
+                        <p className="text-gray-400 text-sm hover:text-primary transition-all">
+                          {url}
+                        </p>
+                      </Link>
+                    </li>
+                  );
+                })}
             </ul>
           </div>
         </main>
@@ -120,7 +120,7 @@ export function Content() {
         <footer className="w-full bg-bg3 border-t-1 border-x-1 border-t-primary border-x-primary p-4 text-center rounded-tl-3xl rounded-tr-3xl">
           {/* Usar <a> se for um link ou <button> se for uma ação */}
           <a
-            href={project.liveUrl} // Supondo que você tenha a URL do projeto
+            href={project.live} // Supondo que você tenha a URL do projeto
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full" // 'block' para o link ocupar todo o espaço do pai

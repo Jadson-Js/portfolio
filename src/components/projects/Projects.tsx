@@ -24,7 +24,7 @@ export function Projects() {
       <div
         key={index}
         onClick={() => setProject(project)}
-        className="block xl:hidden"
+        className="block xl:hidden min-w-70"
       >
         <Card project={project} />
       </div>
@@ -36,7 +36,7 @@ export function Projects() {
       <div
         key={`${currentPage}-${index}`} // Key única por página
         onClick={() => setProject(project)}
-        className="hidden xl:block animate-fade-in"
+        className="hidden xl:block animate-fade-in w-full"
         style={{
           animationDelay: `${index * 100}ms`, // Stagger effect
         }}
@@ -75,7 +75,7 @@ export function Projects() {
           />
 
           {projectsMobile()}
-          {projectsDesktop()}
+          <div className="flex-1">{projectsDesktop()}</div>
 
           <GrFormNext
             className="hidden xl:block text-5xl bg-bg1 rounded-full p-1 shrink-0 hover:bg-bg3 cursor-pointer transition-all"
