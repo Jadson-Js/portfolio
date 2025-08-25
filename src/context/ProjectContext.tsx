@@ -1,7 +1,7 @@
 "use client";
 
 import { IProject } from "@/types/IProject";
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext } from "react";
 
 export interface IProjectContext {
   project: IProject | null;
