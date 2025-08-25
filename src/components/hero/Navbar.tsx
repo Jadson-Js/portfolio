@@ -4,7 +4,6 @@ import Link from "next/link";
 import { FaLinkedin, FaPhoneSquareAlt } from "react-icons/fa";
 import { IoDocumentTextSharp } from "react-icons/io5";
 import { FaSquareGithub } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
 import React from "react";
 import { getCurrentSection } from "@/utils/getCurrentSection";
 

@@ -1,5 +1,4 @@
 import { useProject } from "@/context/ProjectContext";
-import { IProject } from "@/types/IProject";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { GrFormPrevious } from "react-icons/gr";

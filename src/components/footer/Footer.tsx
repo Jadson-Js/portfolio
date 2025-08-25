@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { FaLinkedin, FaPhoneSquareAlt } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
-import { IoDocumentTextSharp } from "react-icons/io5";
-import { MdEmail } from "react-icons/md";
 
 export function Footer() {
   return (
