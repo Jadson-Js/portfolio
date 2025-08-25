@@ -49,8 +49,9 @@ export function useProjects() {
       technologies: ["HTML", "CSS", "Javascript"],
       live: "https://prontocapacitacao.com.br/",
     },
-    /* {
-      thumbnail: "/urbanify_cover.png",
+    {
+      thumbnail: "/project_urbanify_thumbnail.png",
+      video: "/project_urbanify_video.mp4",
       title: "Urbanify – Plataforma Cívica Inteligente",
       subtitle:
         "API, Web e Mobile para relatos urbanos com geolocalização, dashboard analítico e controle de custos na AWS.",
@@ -87,7 +88,7 @@ export function useProjects() {
         "https://github.com/SeuUsuario/urbanify_backend",
         "https://github.com/SeuUsuario/urbanify_frontend",
       ],
-    }, */
+    },
     {
       thumbnail: "/project_tjcompany_thumbnail.png",
       video: "/project_tjcompany_video.mp4",
