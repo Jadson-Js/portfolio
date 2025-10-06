@@ -5,9 +5,30 @@ import { IProject } from "@/types/IProject";
 
 export function useProjects() {
   const [projects] = React.useState<IProject[]>([
-    /* {
-      thumbnail: "/urbanify_cover.png",
-      video: "/urbanify_video.mp4",
+    {
+      thumbnail: "/project_geocheck_thumbnail.png",
+      video: "/project_geocheck_video.mp4",
+      title: "GEOCHECK",
+      subtitle:
+        "Plataforma de Validação de Dados em Alta Performance para o Setor de Energia (EM ANDAMENTO)",
+      overview:
+        "Desenvolvendo uma solução de software sob medida para a CGB, uma das principais parceiras da Equatorial, a 3ª maior distribuidora de energia do Brasil. O GEOCHECK é uma plataforma projetada para processar e validar planilhas de grande volume — variando de 50 mil a mais de 150 mil registros — em questão de segundos. A ferramenta capacita os analistas a garantir a integridade dos dados com uma velocidade e precisão sem precedentes, otimizando um fluxo de trabalho crítico para as operações.",
+      challenge:
+        "O principal desafio técnico foi arquitetar um algoritmo de validação que não apenas performasse com extrema velocidade, mas também fosse robusto o suficiente para lidar com um fluxo massivo e constante de dados complexos. A solução exigia uma arquitetura que garantisse escalabilidade, consistência e tolerância a falhas, evitando gargalos no processamento.",
+      solution:
+        "Para superar o desafio, implementei uma arquitetura escalável utilizando padrões de projeto focados em performance, como o processamento assíncrono e a otimização de consultas. A lógica de validação foi desacoplada em um motor de regras flexível, permitindo que o sistema valide e reporte inconsistências em tempo real, transformando um processo demorado em uma tarefa de segundos.",
+      features: [
+        "Motor de Validação de Alta Velocidade",
+        "Processamento de Planilhas em Lote (.xlsx, .csv)",
+        "Relatórios de Erros Detalhados por Célula",
+        "Dashboard de Análise e Histórico de Validações",
+        "Interface Intuitiva para Analistas",
+      ],
+      technologies: ["Next", "Typescript", "Tailwind", "HTML"],
+    },
+    {
+      thumbnail: "/project_blog_thumbnail.png",
+      video: "/project_blog_video.mp4",
       title: "Dev Space: Blog com SEO e Performance Máximas",
       subtitle:
         "Plataforma de conteúdo com foco em performance, SEO e independência tecnológica, usando Astro e um framework CSS proprietário.",
@@ -24,9 +45,8 @@ export function useProjects() {
         "Design Responsivo: Interface limpa e acessível, perfeita em qualquer dispositivo.",
       ],
       technologies: ["HTML", "Javascript", "Framework CSS Próprio", "Astro"],
-      live: "https://meuportfolio.com",
-      github: ["https://github.com/Jadson-Js/urbanify_backend", ""],
-    }, */
+      live: "https://mypersonalblog12.netlify.app/",
+    },
     {
       thumbnail: "/project_prontocapacitacao_thumbnail.png",
       video: "/project_prontocapacitacao_video.mp4",
@@ -47,7 +67,7 @@ export function useProjects() {
         "FAQ Interativo: Seção de perguntas frequentes para sanar dúvidas e reduzir a fricção na jornada do cliente.",
       ],
       technologies: ["HTML", "CSS", "Javascript"],
-      live: "https://prontocapacitacao.com.br/",
+      //live: "https://prontocapacitacao.com.br/",
     },
     {
       thumbnail: "/project_urbanify_thumbnail.png",
@@ -92,11 +112,11 @@ export function useProjects() {
     {
       thumbnail: "/project_tjcompany_thumbnail.png",
       video: "/project_tjcompany_video.mp4",
-      title: "TJ Company: Empreendedorismo e Tecnologia na Fotografia",
+      title: "TJ Studios: Empreendedorismo e Tecnologia na Fotografia",
       subtitle:
         "Cofundador e líder técnico de uma agência de fotografia, responsável por desenvolver a tecnologia que otimiza a gestão e a captação de clientes.",
       overview:
-        "Como um dos sócios fundadores da TJ Company, atuo como a força motriz por trás de toda a tecnologia da agência. Minha responsabilidade é conceber e desenvolver soluções digitais que nos diferenciam no mercado, desde a prospecção de clientes até a gestão interna. Lidero ativamente a iniciativa de transformar um negócio tradicional de fotografia em uma operação moderna e escalável através da inovação.",
+        "Como um dos sócios fundadores da TJ Studios, atuo como a força motriz por trás de toda a tecnologia da agência. Minha responsabilidade é conceber e desenvolver soluções digitais que nos diferenciam no mercado, desde a prospecção de clientes até a gestão interna. Lidero ativamente a iniciativa de transformar um negócio tradicional de fotografia em uma operação moderna e escalável através da inovação.",
       challenge:
         "O principal desafio foi empreender em um mercado competitivo com recursos financeiros limitados e sem uma vasta experiência prévia em gestão de negócios. Era crucial encontrar uma maneira de validar nossas ideias de forma rápida e barata, minimizando os riscos e maximizando o aprendizado.",
       solution:
@@ -107,9 +127,9 @@ export function useProjects() {
         "CRM Customizado para Fotógrafos: Sistema de gestão em desenvolvimento, projetado para otimizar o fluxo de trabalho, desde o primeiro contato até a entrega final ao cliente.",
         "Liderança Técnica e de Produto: Responsável pela visão estratégica, concepção e execução de todas as ferramentas tecnológicas da agência.",
       ],
-      technologies: ["HTML", "CSS", "Javascript"],
-      live: "https://jadson-js.github.io/tj_company/dist/",
-      github: ["https://github.com/Jadson-Js/tj_company"],
+      technologies: ["HTML", "Tailwind", "Javascript"],
+      //live: "https://jadson-js.github.io/tj_company/dist/",
+      github: ["https://github.com/Jadson-Js/tj_studios_b"],
     },
     {
       thumbnail: "/project_cashbox_thumbnail.png",

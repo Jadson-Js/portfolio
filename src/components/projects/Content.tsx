@@ -12,7 +12,7 @@ export function Content() {
     <>
       {/* Overlay para fechar */}
       <div
-        className="fixed w-full h-full bg-black/40 top-0 left-0 z-20 transition-all cursor-pointer"
+        className="fixed w-full h-full bg-black/40 backdrop-blur-xs top-0 left-0 z-20 transition-all cursor-pointer"
         onClick={() => setProject(null)}
       ></div>
 

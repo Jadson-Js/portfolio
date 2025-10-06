@@ -43,16 +43,15 @@ export function About() {
                 tecnologias modernas.
               </p>
               <p className="text-slate-200">
-                Não estou aqui apenas para “fazer funcionar”.{" "}
+                Ao longo da minha trajetória profissional, tenho entregado
+                produtos de alta qualidade com excelência, sempre atendendo às
+                expectativas de meus clientes.
                 <strong className="text-primary">
-                  Busco evoluir como profissional
-                </strong>
-                , me aprofundar em sistemas robustos e contribuir com projetos
-                sérios, que exijam raciocínio e boa engenharia de software.{" "}
-                <strong className="text-primary">
-                  Quero entender o que está por trás
+                  Mantenho-me em constante atualização
                 </strong>{" "}
-                — e construir com propósito.
+                e aprimoramento técnico, buscando evoluir continuamente e
+                contribuir para o desenvolvimento de soluções robustas e bem
+                estruturadas.
               </p>
             </div>
             <span className="text-primary text-sm">&lt;/p1&gt;</span>
