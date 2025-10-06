@@ -35,7 +35,6 @@ export function Form() {
         setIsSubmitted(true);
 
         (e.target as HTMLFormElement).reset();
-
         setMessage("");
       } else {
         throw new Error("Erro ao enviar formulário");
