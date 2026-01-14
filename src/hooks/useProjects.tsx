@@ -67,7 +67,7 @@ export function useProjects() {
         "FAQ Interativo: Seção de perguntas frequentes para sanar dúvidas e reduzir a fricção na jornada do cliente.",
       ],
       technologies: ["HTML", "CSS", "Javascript"],
-      //live: "https://prontocapacitacao.com.br/",
+      live: "https://prontocapacitacao.com.br/",
     },
     {
       thumbnail: "/project_urbanify_thumbnail.png",
@@ -103,10 +103,9 @@ export function useProjects() {
         "JWT",
         "OAuth2",
       ],
-      live: "https://meuportfolio.com/urbanify",
       github: [
-        "https://github.com/SeuUsuario/urbanify_backend",
-        "https://github.com/SeuUsuario/urbanify_frontend",
+        "https://github.com/Jadson-Js/urbanify_backend",
+        "https://github.com/DiegoLeandro477/Urbanify_Web",
       ],
     },
     {
@@ -155,30 +154,7 @@ export function useProjects() {
         "https://github.com/Jadson-Js/cashbox_frontend",
         "https://github.com/Jadson-Js/cashbox_backend",
       ],
-    },
-    {
-      thumbnail: "/project_bikcraft_thumbnail.png",
-      video: "/project_bikcraft_video.mp4",
-      title: "Bikcraft: Website Responsivo para Bicicletas Customizadas",
-      subtitle:
-        "Projeto de estudo baseado no renomado curso da Origamid, focado em HTML semântico, CSS avançado e JavaScript para interatividade.",
-      overview:
-        "Desenvolvi uma versão completa do website Bikcraft, um projeto amplamente reconhecido na comunidade de desenvolvimento front-end. A aplicação é uma vitrine digital para uma marca de bicicletas elétricas personalizadas, com páginas detalhadas para produtos, seguros, e contato. O foco foi construir uma interface pixel-perfect, responsiva e com código limpo e bem estruturado.",
-      challenge:
-        "O desafio principal foi aplicar com precisão os fundamentos do desenvolvimento web moderno. Isso incluiu a estruturação correta do conteúdo com HTML semântico, a criação de layouts complexos e fluidos utilizando CSS Grid e Flexbox, e a adição de interatividade de forma performática com JavaScript puro, sem o uso de frameworks.",
-      solution:
-        "Seguindo as melhores práticas ensinadas, construí cada componente do zero. Utilizei HTML5 para garantir a semântica e acessibilidade. O CSS foi organizado de forma modular, com uso intensivo de Grid Layout e Flexbox para total controle sobre o design responsivo. O JavaScript foi implementado para manipular o DOM, criando funcionalidades como um menu mobile, uma galeria de imagens interativa e um sistema de navegação suave (smooth scrolling).",
-      features: [
-        "Design Totalmente Responsivo: Experiência de usuário consistente e otimizada para desktops, tablets e smartphones.",
-        "HTML5 Semântico: Código bem estruturado que melhora o SEO e a acessibilidade da página.",
-        "CSS Avançado: Layouts complexos construídos com CSS Grid e Flexbox, demonstrando domínio das ferramentas de posicionamento modernas.",
-        "Interatividade com JavaScript Puro: Funcionalidades como galeria de imagens, menu mobile e animações, desenvolvidas sem dependência de bibliotecas externas.",
-        "Otimização de Performance: Foco em carregar apenas os assets necessários para garantir um site rápido e eficiente.",
-      ],
-      technologies: ["HTML", "CSS", "Javascript"],
-      live: "https://jadson-js.github.io/bikcraft/",
-      github: ["https://github.com/Jadson-Js/bikcraft"],
-    },
+    }
   ]);
 
   return { projects };

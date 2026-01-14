@@ -6,34 +6,26 @@ import { IExperience } from "@/types/IExperience";
 export function useExperiences() {
   const [experiences] = React.useState<IExperience[]>([
     {
+      company: "Escribo",
+      startDate: "Nov/25",
+      endData: "Atual",
+      role: "Desenvolvedor Backend | TypeScript | PostgreSQL | IA",
+      description: [
+        "Arquitetura Serverless & Supabase: Implementação de soluções backend escaláveis utilizando o ecossistema Supabase, desenvolvendo Edge Functions otimizadas em Deno/TypeScript.",
+        "Engenharia de Dados (PostgreSQL): Desenvolvo a arquitetura de banco de dados e lógicas avançadas via PL/pgSQL, eliminando gargalos de performance e otimizando queries críticas para suportar operações complexas.",
+        "Engenharia de IA & LLMs: Integro LLMs (OpenAI/Gemini) em funcionalidades de produção, aplicando o Model Context Protocol (MCP) e estratégias de Prompt Engineering para garantir respostas precisas e contextuais.",
+        "Desenvolvimento & Decisões Técnicas: Atuo ativamente na definição da arquitetura técnica de novas features, assegurando a entrega de código limpo e manutenível."
+      ],
+    },
+    {
       company: "Saggita Digital",
       startDate: "Jul/23",
       endData: "Jan/24",
       role: "Desenvolvedor (Júnior)",
       description: [
-        "Interfaces customizadas conforme requisitos.",
-        "APIs e gateway de pagamento integrados.",
-        "Testes rigorosos garantindo qualidade.",
-        "Bugs corrigidos e performance otimizada.",
-        "Sistema mantido e evoluído via feedback.",
-        "Parceria com design em soluções viáveis.",
-        "Segurança full‑stack: autenticação e proteção.",
-        "Algoritmo dinâmico de grades para e‑commerce.",
-      ],
-    },
-    {
-      company: "Digital Labs",
-      startDate: "Mai/23",
-      endData: "Jun/23",
-      role: "Desenvolvedor (Estágiario)",
-      description: [
-        "Funcionalidades críticas desenvolvidas e mantidas em produção.",
-        "Resolução ágil de problemas com proatividade.",
-        "Implementação de funcionalidades de alto impacto desde o início.",
-        "Componente drag‑and‑drop estilo Trello para usabilidade.",
-        "Documentação técnica para APIs e processos internos.",
-        "Levantamento de requisitos e tradução em specs técnicas.",
-        "Análise e integração de APIs de e‑mail marketing.",
+        "Desenvolvimento de E-commerce B2B: Liderei a construção de módulos críticos para uma plataforma de vestuário, incluindo a integração de Gateways de Pagamento Asaas, garantindo transações seguras e gestão de assinaturas recorrentes.",
+        "Sistema de Gestão Escolar: Atuei no ciclo completo de desenvolvimento de um ERP escolar, focando na criação de interfaces responsivas.",
+        "Colaboração & Documentação: Traduzi requisitos de negócio e designs complexos em funcionalidades viáveis, além de criar documentação técnica detalhada para facilitar o onboarding de novos desenvolvedores, usuarios e manutenção futura."
       ],
     },
   ]);

@@ -72,23 +72,6 @@ export function Sidebar({ sectionTarget }: ISidebarProps) {
         </li>
         <li
           className={`rounded-full p-2 ${
-            hash === "projects" ? "bg-white" : "bg-bg3"
-          }`}
-        >
-          <div
-            onClick={() => {
-              scroll("projects");
-              sectionTarget.current = 2;
-            }}
-            className="cursor-pointer"
-          >
-            <MdOutlineDesktopWindows
-              className={`text-xl ${hash === "projects" && "text-slate-800"}`}
-            />
-          </div>
-        </li>
-        <li
-          className={`rounded-full p-2 ${
             hash === "experiences" ? "bg-white" : "bg-bg3"
           }`}
         >
@@ -106,6 +89,24 @@ export function Sidebar({ sectionTarget }: ISidebarProps) {
             />
           </div>
         </li>
+        <li
+          className={`rounded-full p-2 ${
+            hash === "projects" ? "bg-white" : "bg-bg3"
+          }`}
+        >
+          <div
+            onClick={() => {
+              scroll("projects");
+              sectionTarget.current = 2;
+            }}
+            className="cursor-pointer"
+          >
+            <MdOutlineDesktopWindows
+              className={`text-xl ${hash === "projects" && "text-slate-800"}`}
+            />
+          </div>
+        </li>
+        
         <li
           className={`rounded-full p-2 ${
             hash === "contact" ? "bg-white" : "bg-bg3"

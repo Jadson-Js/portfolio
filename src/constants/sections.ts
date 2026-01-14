@@ -1,7 +1,7 @@
 export const sectionsName = [
   "hero",
   "about",
-  "projects",
   "experiences",
+  "projects",
   "contact",
 ] as const;

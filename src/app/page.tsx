@@ -105,8 +105,8 @@ export default function Home() {
       <main className="relative">
         <Hero />
         <About />
-        <Projects />
         <Experiences />
+        <Projects />
         <Contact />
         <Sidebar sectionTarget={{ current: currentSection }} />{" "}
         {/* Passe o estado atual para a Sidebar */}

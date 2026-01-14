@@ -12,7 +12,7 @@ export function About() {
     <section
       id="about"
       className="bg-bg3  px-8 py-8 xl:px-20 md:py-16 min-h-screen flex items-center"
-      style={{ backgroundImage: "url('/about_bg.svg')" }}
+      style={{ backgroundImage: "url('/projects_bg.png')" }}
     >
       <div className="max-w-[1200px] container mx-auto grid grid-cols-1 gap-16  md:grid-cols-3">
         <article className="flex flex-col gap-8 col-span-2">
