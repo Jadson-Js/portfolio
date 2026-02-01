@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![Portfolio Demo](public/presentation.gif)
-
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
@@ -12,6 +10,12 @@
 **Portfolio interativo moderno construído com as tecnologias mais recentes do ecossistema React.**
 
 [🌐 Ver Demo](https://jadsondev.com) • [📧 Contato](mailto:contato@jadsondev.com)
+
+## 🎬 Demonstração
+
+<p align="center">
+  <img src="public/presentation.gif" alt="Demonstração do Urbanify Dashboard" width="100%" />
+</p>
 
 </div>
 
