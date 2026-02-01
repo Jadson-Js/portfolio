@@ -5,7 +5,7 @@
     ".gitignore": true,
     "package-lock.json": true,
     "next-env.d.ts": true,
-    "README.md": true,
+    //"README.md": true,
     "tsconfig.json": true,
     "postcss.config.js": true,
     "next.config.js": true,

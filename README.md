@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Portfolio - Jadson
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+![Portfolio Demo](public/presentation.gif)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+
+**Portfolio interativo moderno construído com as tecnologias mais recentes do ecossistema React.**
+
+[🌐 Ver Demo](https://jadsondev.com) • [📧 Contato](mailto:contato@jadsondev.com)
+
+</div>
+
+---
+
+## ✨ Destaques
+
+- 🎨 **Design Moderno** — Interface elegante com animações fluidas e experiência imersiva
+- 📱 **Responsivo** — Adaptação perfeita para desktop, tablet e mobile
+- ⚡ **Alta Performance** — Otimizado com Next.js 15 Turbopack e React 19
+- 🖱️ **Scroll Inteligente** — Navegação suave entre seções com scroll customizado no desktop
+- 🎬 **Showcase de Projetos** — Galeria interativa com vídeos de demonstração dos projetos
+
+---
+
+## 🛠️ Stack Tecnológica
+
+| Categoria | Tecnologias |
+|-----------|-------------|
+| **Frontend** | React 19, Next.js 15, TypeScript |
+| **Estilização** | Tailwind CSS 4, CSS Modules |
+| **Tooling** | ESLint, Turbopack |
+| **Deploy** | Vercel |
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
+src/
+├── app/              # App Router (Next.js 15)
+├── components/       # Componentes React reutilizáveis
+│   ├── hero/         # Seção inicial com apresentação
+│   ├── about/        # Seção sobre mim
+│   ├── experiences/  # Experiências profissionais
+│   ├── projects/     # Showcase de projetos
+│   ├── contact/      # Formulário de contato
+│   └── footer/       # Rodapé
+├── hooks/            # Custom React Hooks
+├── context/          # Context API para estado global
+├── types/            # Definições TypeScript
+└── utils/            # Funções utilitárias
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Executando Localmente
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Clone o repositório
+git clone https://github.com/Jadson-Js/portfolio.git
 
-## Learn More
+# Acesse a pasta do projeto
+cd portfolio
 
-To learn more about Next.js, take a look at the following resources:
+# Instale as dependências
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Execute o servidor de desenvolvimento
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📸 Seções
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Seção | Descrição |
+|-------|-----------|
+| **Hero** | Apresentação inicial com call-to-action |
+| **Sobre** | Informações pessoais e stack de tecnologias |
+| **Experiências** | Timeline das experiências profissionais |
+| **Projetos** | Galeria interativa dos principais projetos |
+| **Contato** | Formulário e links para redes sociais |
+
+---
+
+## 🎯 Projetos em Destaque
+
+Alguns dos projetos apresentados no portfolio:
+
+- 🏍️ **Bikcraft** — E-commerce de bicicletas elétricas
+- 📝 **Blog Pessoal** — Plataforma de artigos técnicos
+- 💰 **CashBox** — Sistema de gestão financeira
+- 📍 **GeoCheck** — Aplicativo de check-in geolocalizado
+- 🎓 **Pronto Capacitação** — Plataforma de cursos online
+- 🏙️ **Urbanify** — Sistema de gestão urbana
+
+---
+
+## 👨‍💻 Sobre o Desenvolvedor
+
+**Jadson** — Desenvolvedor Full Stack apaixonado por criar experiências web incríveis.
+
+**Stack principal:**
+- TypeScript | Node.js | React | React Native | Next.js
+- MySQL | MongoDB | DynamoDB
+- Jest | Testing Library
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+<div align="center">
+
+**Feito com ❤️ e muito ☕**
+
+</div>
