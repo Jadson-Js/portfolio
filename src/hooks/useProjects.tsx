@@ -6,70 +6,6 @@ import { IProject } from "@/types/IProject";
 export function useProjects() {
   const [projects] = React.useState<IProject[]>([
     {
-      thumbnail: "/project_geocheck_thumbnail.png",
-      video: "/project_geocheck_video.mp4",
-      title: "GEOCHECK",
-      subtitle:
-        "Plataforma de Validação de Dados em Alta Performance para o Setor de Energia (EM ANDAMENTO)",
-      overview:
-        "Desenvolvendo uma solução de software sob medida para a CGB, uma das principais parceiras da Equatorial, a 3ª maior distribuidora de energia do Brasil. O GEOCHECK é uma plataforma projetada para processar e validar planilhas de grande volume — variando de 50 mil a mais de 150 mil registros — em questão de segundos. A ferramenta capacita os analistas a garantir a integridade dos dados com uma velocidade e precisão sem precedentes, otimizando um fluxo de trabalho crítico para as operações.",
-      challenge:
-        "O principal desafio técnico foi arquitetar um algoritmo de validação que não apenas performasse com extrema velocidade, mas também fosse robusto o suficiente para lidar com um fluxo massivo e constante de dados complexos. A solução exigia uma arquitetura que garantisse escalabilidade, consistência e tolerância a falhas, evitando gargalos no processamento.",
-      solution:
-        "Para superar o desafio, implementei uma arquitetura escalável utilizando padrões de projeto focados em performance, como o processamento assíncrono e a otimização de consultas. A lógica de validação foi desacoplada em um motor de regras flexível, permitindo que o sistema valide e reporte inconsistências em tempo real, transformando um processo demorado em uma tarefa de segundos.",
-      features: [
-        "Motor de Validação de Alta Velocidade",
-        "Processamento de Planilhas em Lote (.xlsx, .csv)",
-        "Relatórios de Erros Detalhados por Célula",
-        "Dashboard de Análise e Histórico de Validações",
-        "Interface Intuitiva para Analistas",
-      ],
-      technologies: ["Next", "Typescript", "Tailwind", "HTML"],
-    },
-    {
-      thumbnail: "/project_blog_thumbnail.png",
-      video: "/project_blog_video.mp4",
-      title: "Dev Space: Blog com SEO e Performance Máximas",
-      subtitle:
-        "Plataforma de conteúdo com foco em performance, SEO e independência tecnológica, usando Astro e um framework CSS proprietário.",
-      overview:
-        "Desenvolvi uma plataforma de conteúdo para um cliente com foco total em performance e SEO. Fui responsável por todo o projeto, do UI/UX Design ao código, garantindo uma solução escalável e sem dependência de ecossistemas fechados.",
-      challenge:
-        "O desafio era obter SEO e velocidade de ponta sem o aprisionamento tecnológico (vendor lock-in) de frameworks como Next.js. A renderização via JavaScript puro (CSR) não era uma opção viável para a indexação.",
-      solution:
-        "Utilizei Astro para gerar um site estático (HTML/CSS) de alta performance, com 'ilhas' de interatividade em React. Para otimizar ainda mais, criei um framework CSS do zero, eliminando código desnecessário e reduzindo drasticamente o tempo de carregamento.",
-      features: [
-        "Performance Extrema: Nota máxima em auditorias do Google Lighthouse, garantida pela arquitetura Astro e CSS otimizado.",
-        "SEO de Alto Nível: Estrutura 100% otimizada e indexável para motores de busca.",
-        "Sugestão de Conteúdo: Algoritmo que aumenta o engajamento do usuário sugerindo posts relacionados.",
-        "Design Responsivo: Interface limpa e acessível, perfeita em qualquer dispositivo.",
-      ],
-      technologies: ["HTML", "Javascript", "Framework CSS Próprio", "Astro"],
-      live: "https://mypersonalblog12.netlify.app/",
-    },
-    {
-      thumbnail: "/project_prontocapacitacao_thumbnail.png",
-      video: "/project_prontocapacitacao_video.mp4",
-      title: "Pronto Capacitação: Landing Page Adaptativa de Alta Conversão",
-      subtitle:
-        "Landing Page de alta performance para cliente de treinamentos, com design e conteúdo dinamicamente adaptáveis para públicos B2B e B2C.",
-      overview:
-        "Desenvolvi uma Landing Page para a Pronto Capacitação com foco absoluto em performance, SEO e, principalmente, versatilidade. O projeto foi concebido para atender tanto clientes corporativos (B2B) quanto o consumidor final (B2C) a partir de uma única base de código, garantindo uma experiência de usuário coesa e otimizada para ambos os públicos.",
-      challenge:
-        "O principal desafio técnico era fazer com que uma única página HTML se comportasse de maneiras distintas, alterando estrutura e conteúdo, sem duplicar código ou prejudicar o SEO. A solução precisava ser leve e eficiente para não comprometer a velocidade de carregamento.",
-      solution:
-        "A solução foi implementar um script em JavaScript que analisa a URL de entrada. Dependendo dos parâmetros presentes, ele identifica se o visitante busca um serviço corporativo ou um curso individual. Com base nessa identificação, o script manipula o DOM em tempo real para renderizar os elementos, textos e CTAs (Call to Actions) mais relevantes para cada público, criando uma experiência personalizada e altamente direcionada.",
-      features: [
-        "Métricas de Elite: Nota máxima na maioria dos parâmetros das auditorias do Google (Lighthouse), comprovando a excelência em Performance, Acessibilidade e SEO.",
-        "Conteúdo Dinâmico B2B/B2C: A página se adapta automaticamente para exibir a oferta correta para empresas ou clientes finais.",
-        "Design Responsivo: Interface elegante e funcional em qualquer dispositivo, do desktop ao smartphone.",
-        "Animações Sutis: Microinterações e animações que guiam o usuário e melhoram a experiência sem impactar a performance.",
-        "FAQ Interativo: Seção de perguntas frequentes para sanar dúvidas e reduzir a fricção na jornada do cliente.",
-      ],
-      technologies: ["HTML", "CSS", "Javascript"],
-      live: "https://prontocapacitacao.com.br/",
-    },
-    {
       thumbnail: "/project_urbanify_thumbnail.png",
       video: "/project_urbanify_video.mp4",
       title: "Urbanify – Plataforma Cívica Inteligente",
@@ -105,30 +41,29 @@ export function useProjects() {
       ],
       github: [
         "https://github.com/Jadson-Js/urbanify_backend",
-        "https://github.com/DiegoLeandro477/Urbanify_Web",
+        "https://github.com/Jadson-Js/urbanify_frontend",
       ],
     },
     {
-      thumbnail: "/project_tjcompany_thumbnail.png",
-      video: "/project_tjcompany_video.mp4",
-      title: "TJ Studios: Empreendedorismo e Tecnologia na Fotografia",
+      thumbnail: "/project_blog_thumbnail.png",
+      video: "/project_blog_video.mp4",
+      title: "Dev Space: Blog com SEO e Performance Máximas",
       subtitle:
-        "Cofundador e líder técnico de uma agência de fotografia, responsável por desenvolver a tecnologia que otimiza a gestão e a captação de clientes.",
+        "Plataforma de conteúdo com foco em performance, SEO e independência tecnológica, usando Astro e um framework CSS proprietário.",
       overview:
-        "Como um dos sócios fundadores da TJ Studios, atuo como a força motriz por trás de toda a tecnologia da agência. Minha responsabilidade é conceber e desenvolver soluções digitais que nos diferenciam no mercado, desde a prospecção de clientes até a gestão interna. Lidero ativamente a iniciativa de transformar um negócio tradicional de fotografia em uma operação moderna e escalável através da inovação.",
+        "Desenvolvi uma plataforma de conteúdo para um cliente com foco total em performance e SEO. Fui responsável por todo o projeto, do UI/UX Design ao código, garantindo uma solução escalável e sem dependência de ecossistemas fechados.",
       challenge:
-        "O principal desafio foi empreender em um mercado competitivo com recursos financeiros limitados e sem uma vasta experiência prévia em gestão de negócios. Era crucial encontrar uma maneira de validar nossas ideias de forma rápida e barata, minimizando os riscos e maximizando o aprendizado.",
+        "O desafio era obter SEO e velocidade de ponta sem o aprisionamento tecnológico (vendor lock-in) de frameworks como Next.js. A renderização via JavaScript puro (CSR) não era uma opção viável para a indexação.",
       solution:
-        "Adotei princípios de gestão empresarial ágil, inspirados em metodologias como a do livro 'A Startup Enxuta'. Criei um processo interno para validar nossas hipóteses de negócio com baixo custo. O primeiro passo prático foi desenvolver uma Landing Page de alta conversão para captar os primeiros clientes. Atualmente, estou liderando o desenvolvimento de um CRM proprietário, projetado do zero e baseado nas melhores ferramentas do mercado internacional, mas totalmente customizado para as necessidades e o fluxo de trabalho do mercado fotográfico.",
+        "Utilizei Astro para gerar um site estático (HTML/CSS) de alta performance, com 'ilhas' de interatividade em React. Para otimizar ainda mais, criei um framework CSS do zero, eliminando código desnecessário e reduzindo drasticamente o tempo de carregamento.",
       features: [
-        "Metodologia de Validação Ágil: Aplicação de conceitos de Lean Startup para testar e iterar sobre as ideias de negócio com eficiência.",
-        "Landing Page de Captação: Portal web focado em conversão para apresentar os serviços e gerar leads qualificados.",
-        "CRM Customizado para Fotógrafos: Sistema de gestão em desenvolvimento, projetado para otimizar o fluxo de trabalho, desde o primeiro contato até a entrega final ao cliente.",
-        "Liderança Técnica e de Produto: Responsável pela visão estratégica, concepção e execução de todas as ferramentas tecnológicas da agência.",
+        "Performance Extrema: Nota máxima em auditorias do Google Lighthouse, garantida pela arquitetura Astro e CSS otimizado.",
+        "SEO de Alto Nível: Estrutura 100% otimizada e indexável para motores de busca.",
+        "Sugestão de Conteúdo: Algoritmo que aumenta o engajamento do usuário sugerindo posts relacionados.",
+        "Design Responsivo: Interface limpa e acessível, perfeita em qualquer dispositivo.",
       ],
-      technologies: ["HTML", "Tailwind", "Javascript"],
-      //live: "https://jadson-js.github.io/tj_company/dist/",
-      github: ["https://github.com/Jadson-Js/tj_studios_b"],
+      technologies: ["HTML", "Javascript", "Framework CSS Próprio", "Astro"],
+      live: "https://blog-c591vq8js-imperium-dev.vercel.app",
     },
     {
       thumbnail: "/project_cashbox_thumbnail.png",
@@ -154,6 +89,69 @@ export function useProjects() {
         "https://github.com/Jadson-Js/cashbox_frontend",
         "https://github.com/Jadson-Js/cashbox_backend",
       ],
+    },
+    {
+      thumbnail: "/project_geocheck_thumbnail.png",
+      video: "/project_geocheck_video.mp4",
+      title: "GEOCHECK",
+      subtitle:
+        "Plataforma de Validação de Dados em Alta Performance para o Setor de Energia (EM ANDAMENTO)",
+      overview:
+        "Desenvolvendo uma solução de software sob medida para a CGB, uma das principais parceiras da Equatorial, a 3ª maior distribuidora de energia do Brasil. O GEOCHECK é uma plataforma projetada para processar e validar planilhas de grande volume — variando de 50 mil a mais de 150 mil registros — em questão de segundos. A ferramenta capacita os analistas a garantir a integridade dos dados com uma velocidade e precisão sem precedentes, otimizando um fluxo de trabalho crítico para as operações.",
+      challenge:
+        "O principal desafio técnico foi arquitetar um algoritmo de validação que não apenas performasse com extrema velocidade, mas também fosse robusto o suficiente para lidar com um fluxo massivo e constante de dados complexos. A solução exigia uma arquitetura que garantisse escalabilidade, consistência e tolerância a falhas, evitando gargalos no processamento.",
+      solution:
+        "Para superar o desafio, implementei uma arquitetura escalável utilizando padrões de projeto focados em performance, como o processamento assíncrono e a otimização de consultas. A lógica de validação foi desacoplada em um motor de regras flexível, permitindo que o sistema valide e reporte inconsistências em tempo real, transformando um processo demorado em uma tarefa de segundos.",
+      features: [
+        "Motor de Validação de Alta Velocidade",
+        "Processamento de Planilhas em Lote (.xlsx, .csv)",
+        "Relatórios de Erros Detalhados por Célula",
+        "Dashboard de Análise e Histórico de Validações",
+        "Interface Intuitiva para Analistas",
+      ],
+      technologies: ["Next", "Typescript", "Tailwind", "HTML"],
+    },
+    {
+      thumbnail: "/project_filter_image_thumbnail.png",
+      video: "/project_filter_image_video.mp4",
+      title: "Filtro de Imagem em C (Harvard Challenge)",
+      subtitle: "Processamento de imagens em baixo nível com manipulação direta de memória.",
+      overview:
+        "Desenvolvido como parte do desafiador curso CS50 de Harvard, este projeto consiste em um software escrito em C puro capaz de manipular arquivos de imagem no formato Bitmap (BMP). Diferente de abordagens modernas que utilizam bibliotecas prontas, aqui o foco foi entender 'o que acontece por baixo do capô': acessar os bytes brutos do processador, gerenciar alocação de memória e aplicar lógica matemática diretamente na matriz de pixels.",
+      challenge:
+        "O principal obstáculo foi a complexidade inerente à linguagem C: lidar com aritmética de ponteiros, alocação dinâmica de memória e a estrutura binária de arquivos BMP sem corromper os dados. Além disso, adotei uma regra rigorosa de 'Zero IA', forçando-me a deduzir e implementar a lógica matemática de inversão de cores e percorrimento de matrizes por conta própria para garantir o aprendizado real dos fundamentos.",
+      solution:
+        "Implementei um algoritmo que interpreta a imagem como uma matriz de estruturas de dados (pixels). O código navega pela memória utilizando ponteiros para acessar os canais RGB de cada pixel individualmente. Para o filtro de inversão, apliquei a lógica de subtrair o valor atual de cada canal pelo valor máximo (255), criando o efeito 'negativo'. A solução foca em eficiência de memória e precisão na manipulação dos bits.",
+      features: [
+        "Manipulação direta de arquivos binários (BMP)",
+        "Gerenciamento manual de memória (malloc/free)",
+        "Aritmética de ponteiros para navegação em matrizes",
+        "Processamento de canais RGB pixel a pixel",
+        "Algoritmo de inversão de cores (Filtro Negativo)"
+      ],
+      technologies: ["C",],
+      github: ["https://github.com/Jadson-Js/filter_image"],
+    },
+    {
+      thumbnail: "project_body_tracker_thumbnail.png",
+      video: "/project_black_video.mp4",
+      title: "Monitor de Postura com IA (MediaPipe)",
+      subtitle: "Assistente ergonômico em tempo real utilizando Visão Computacional e Geometria.",
+      overview:
+        "Com o aumento do trabalho remoto, a má postura se tornou um problema silencioso. Este projeto é uma aplicação Python que utiliza a webcam para monitorar a ergonomia do usuário em tempo real. Diferente de soluções baseadas em hardware (wearables), utilizei Visão Computacional para mapear pontos biomecânicos do corpo e calcular desvios posturais matematicamente.",
+      challenge:
+        "O maior desafio foi garantir precisão em um ambiente não controlado. A detecção de landmarks sofre com variações de iluminação e qualidade da webcam (ruído). Além disso, transformar coordenadas 2D em uma análise de postura confiável exigiu lidar com a instabilidade dos sensores e definir limiares angulares que funcionassem para diferentes biotipos sem gerar falsos positivos constantes.",
+      solution:
+        "Integrei o modelo 'Pose Landmarker' do Google MediaPipe para extração robusta de 33 pontos corporais, processados via OpenCV. A lógica central utiliza a biblioteca NumPy para cálculo vetorial e trigonometria (atan2) entre ombro, quadril e joelho. O sistema opera em um loop de feedback visual imediato, alertando o usuário apenas quando desvios anatômicos críticos são detectados.",
+      features: [
+        "Detecção de esqueleto corporal em tempo real (30+ FPS)",
+        "Cálculo trigonométrico de ângulos articulares",
+        "Feedback visual imediato (Borda Vermelha/Verde)",
+        "Processamento local (Privacidade total do vídeo)",
+        "Arquitetura modular (Separação de Model/Utils/Main)"
+      ],
+      technologies: ["Python"],
+      github: ["https://github.com/Jadson-Js/body_tracker"],
     }
   ]);
 

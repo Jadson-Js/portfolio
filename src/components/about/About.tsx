@@ -33,13 +33,12 @@ export function About() {
                 gira em torno de{" "}
                 <strong className="text-primary">TypeScript</strong>,{" "}
                 <strong className="text-primary">Node</strong>,{" "}
-                <strong className="text-primary">React</strong>,
-                <strong className="text-primary">React Native</strong>,{" "}
-                <strong className="text-primary">Next</strong>,{" "}
-                <strong className="text-primary">MySQL</strong>,{" "}
+                <strong className="text-primary">Next</strong>,
+                <strong className="text-primary">PostgreSQL</strong>,{" "}
                 <strong className="text-primary">MongoDB</strong>,{" "}
                 <strong className="text-primary">DynamoDB</strong>,{" "}
-                <strong className="text-primary">Jest</strong> e outras
+                <strong className="text-primary">Jest</strong>,{" "}
+                <strong className="text-primary">AWS</strong> e outras
                 tecnologias modernas.
               </p>
               <p className="text-slate-200">

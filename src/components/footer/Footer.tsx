@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="bg-bg3  px-8 py-4 xl:px-20 md:py-4 border-t-3 border-bg1">
       <div className="max-w-[1200px] container mx-auto flex flex-col justify-center gap-4 items-center md:flex-row md:justify-between">
         <span className="text-xs text-center">
-          © 2025 Jadson – Todos os direitos reservados.
+          © 2026 Jadson – Todos os direitos reservados.
         </span>
 
         <span className="text-xs text-center">
