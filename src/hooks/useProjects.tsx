@@ -6,6 +6,41 @@ import { IProject } from "@/types/IProject";
 export function useProjects() {
   const [projects] = React.useState<IProject[]>([
     {
+      thumbnail: "/project_codedragon_thumbnail.png",
+      video: "/project_codedragon_video.mp4",
+      title: "CodeDragon – Mentor de Carreira Inteligente",
+      subtitle:
+        "Plataforma SaaS com IA para simulados técnicos, análise de performance e geração de roadmaps personalizados.",
+      overview:
+        "O CodeDragon é uma plataforma projetada para acelerar a evolução de desenvolvedores. Utilizando inteligência artificial, o sistema identifica lacunas de conhecimento e gera trilhas de estudo baseadas na performance em tempo real. A arquitetura foi desenvolvida em um mono-repositório, aplicando Clean Architecture no backend e um design orientado a features no frontend para garantir organização e escalabilidade.",
+      challenge:
+        "Mitigar a latência natural dos modelos de IA (LLMs) durante a geração de simulados para manter a experiência fluida. Além disso, estruturar a geração de conteúdo de forma escalável para abranger tanto tópicos generalistas quanto conceitos profundos de backend, como SQL e Event Loop.",
+      solution:
+        "Implementei um algoritmo de geração híbrida de simulados: um batch síncrono entrega as primeiras 5 questões imediatamente, enquanto o restante é processado de forma assíncrona em background usando BullMQ e Redis. As regras de negócio complexas foram isoladas através da Clean Architecture.",
+      features: [
+        "Simulados técnicos dinâmicos gerados por IA (Gemini Pro/GPT-4).",
+        "Geração de questões otimizada com processamento assíncrono em lote.",
+        "Análise de performance com identificação de lacunas de conhecimento.",
+        "Roadmaps e trilhas de estudo geradas automaticamente.",
+        "Gamificação com ranking, cálculo de percentil e pontuação.",
+      ],
+      technologies: [
+        "TypeScript",
+        "Node.js",
+        "Express",
+        "Prisma",
+        "PostgreSQL",
+        "BullMQ",
+        "Redis",
+        "Google Gemini Pro",
+        "React 19",
+        "Tailwind CSS 4",
+        "TanStack Query",
+      ],
+      github: ["https://github.com/Jadson-Js/code_dragon"],
+      live: "https://codedragon.vercel.app/",
+    },
+    {
       thumbnail: "/project_urbanify_thumbnail.png",
       video: "/project_urbanify_video.mp4",
       title: "Urbanify – Plataforma Cívica Inteligente",
@@ -65,94 +100,6 @@ export function useProjects() {
       technologies: ["HTML", "Javascript", "Framework CSS Próprio", "Astro"],
       live: "https://blog-c591vq8js-imperium-dev.vercel.app",
     },
-    {
-      thumbnail: "/project_cashbox_thumbnail.png",
-      video: "/project_cashbox_video.mp4",
-      title: "Cashbox: Aplicativo de Gestão Financeira Pessoal",
-      subtitle:
-        "Aplicativo mobile de estudo para planejamento financeiro, desenvolvido com React Native e TypeScript.",
-      overview:
-        "Cashbox é um projeto de estudo concebido para aplicar e aprofundar meus conhecimentos em desenvolvimento mobile. O aplicativo permite que o usuário realize um planejamento financeiro completo, registrando suas receitas e despesas de forma intuitiva e visualizando sua saúde financeira através de um dashboard interativo.",
-      challenge:
-        "O principal desafio foi a produção de um aplicativo mobile utilizando uma stack tecnológica com a qual eu não tinha domínio prévio: React Native e TypeScript. O objetivo era sair da zona de conforto e aprender a construir uma aplicação robusta e tipada do zero.",
-      solution:
-        "Dediquei-me a um período de estudo focado na documentação oficial e em boas práticas de mercado para ambas as tecnologias. Desenvolvi o projeto de forma incremental, aplicando os conceitos aprendidos na prática para construir cada funcionalidade, desde a estrutura inicial até a implementação de um sistema de autenticação seguro.",
-      features: [
-        "CRUD Financeiro Completo: O usuário pode criar, ler, atualizar e deletar todas as suas transações financeiras (receitas e despesas).",
-        "Dashboard Interativo: Gráficos e resumos visuais que apresentam o balanço financeiro do usuário de forma clara e objetiva.",
-        "Autenticação Segura com JWT: Sistema de cadastro e login de usuários utilizando JSON Web Tokens, com implementação de refresh token para manter o usuário conectado de forma segura.",
-        "Interface Intuitiva: Foco em uma experiência de usuário limpa e direta para facilitar a gestão das finanças no dia a dia.",
-      ],
-      technologies: ["React Native", "TypeScript", "Styled-Components"],
-      //live: "",
-      github: [
-        "https://github.com/Jadson-Js/cashbox_frontend",
-        "https://github.com/Jadson-Js/cashbox_backend",
-      ],
-    },
-    {
-      thumbnail: "/project_geocheck_thumbnail.png",
-      video: "/project_geocheck_video.mp4",
-      title: "GEOCHECK",
-      subtitle:
-        "Plataforma de Validação de Dados em Alta Performance para o Setor de Energia (EM ANDAMENTO)",
-      overview:
-        "Desenvolvendo uma solução de software sob medida para a CGB, uma das principais parceiras da Equatorial, a 3ª maior distribuidora de energia do Brasil. O GEOCHECK é uma plataforma projetada para processar e validar planilhas de grande volume — variando de 50 mil a mais de 150 mil registros — em questão de segundos. A ferramenta capacita os analistas a garantir a integridade dos dados com uma velocidade e precisão sem precedentes, otimizando um fluxo de trabalho crítico para as operações.",
-      challenge:
-        "O principal desafio técnico foi arquitetar um algoritmo de validação que não apenas performasse com extrema velocidade, mas também fosse robusto o suficiente para lidar com um fluxo massivo e constante de dados complexos. A solução exigia uma arquitetura que garantisse escalabilidade, consistência e tolerância a falhas, evitando gargalos no processamento.",
-      solution:
-        "Para superar o desafio, implementei uma arquitetura escalável utilizando padrões de projeto focados em performance, como o processamento assíncrono e a otimização de consultas. A lógica de validação foi desacoplada em um motor de regras flexível, permitindo que o sistema valide e reporte inconsistências em tempo real, transformando um processo demorado em uma tarefa de segundos.",
-      features: [
-        "Motor de Validação de Alta Velocidade",
-        "Processamento de Planilhas em Lote (.xlsx, .csv)",
-        "Relatórios de Erros Detalhados por Célula",
-        "Dashboard de Análise e Histórico de Validações",
-        "Interface Intuitiva para Analistas",
-      ],
-      technologies: ["Next", "Typescript", "Tailwind", "HTML"],
-    },
-    {
-      thumbnail: "/project_filter_image_thumbnail.png",
-      video: "/project_filter_image_video.mp4",
-      title: "Filtro de Imagem em C (Harvard Challenge)",
-      subtitle: "Processamento de imagens em baixo nível com manipulação direta de memória.",
-      overview:
-        "Desenvolvido como parte do desafiador curso CS50 de Harvard, este projeto consiste em um software escrito em C puro capaz de manipular arquivos de imagem no formato Bitmap (BMP). Diferente de abordagens modernas que utilizam bibliotecas prontas, aqui o foco foi entender 'o que acontece por baixo do capô': acessar os bytes brutos do processador, gerenciar alocação de memória e aplicar lógica matemática diretamente na matriz de pixels.",
-      challenge:
-        "O principal obstáculo foi a complexidade inerente à linguagem C: lidar com aritmética de ponteiros, alocação dinâmica de memória e a estrutura binária de arquivos BMP sem corromper os dados. Além disso, adotei uma regra rigorosa de 'Zero IA', forçando-me a deduzir e implementar a lógica matemática de inversão de cores e percorrimento de matrizes por conta própria para garantir o aprendizado real dos fundamentos.",
-      solution:
-        "Implementei um algoritmo que interpreta a imagem como uma matriz de estruturas de dados (pixels). O código navega pela memória utilizando ponteiros para acessar os canais RGB de cada pixel individualmente. Para o filtro de inversão, apliquei a lógica de subtrair o valor atual de cada canal pelo valor máximo (255), criando o efeito 'negativo'. A solução foca em eficiência de memória e precisão na manipulação dos bits.",
-      features: [
-        "Manipulação direta de arquivos binários (BMP)",
-        "Gerenciamento manual de memória (malloc/free)",
-        "Aritmética de ponteiros para navegação em matrizes",
-        "Processamento de canais RGB pixel a pixel",
-        "Algoritmo de inversão de cores (Filtro Negativo)"
-      ],
-      technologies: ["C",],
-      github: ["https://github.com/Jadson-Js/filter_image"],
-    },
-    {
-      thumbnail: "project_body_tracker_thumbnail.png",
-      video: "/project_black_video.mp4",
-      title: "Monitor de Postura com IA (MediaPipe)",
-      subtitle: "Assistente ergonômico em tempo real utilizando Visão Computacional e Geometria.",
-      overview:
-        "Com o aumento do trabalho remoto, a má postura se tornou um problema silencioso. Este projeto é uma aplicação Python que utiliza a webcam para monitorar a ergonomia do usuário em tempo real. Diferente de soluções baseadas em hardware (wearables), utilizei Visão Computacional para mapear pontos biomecânicos do corpo e calcular desvios posturais matematicamente.",
-      challenge:
-        "O maior desafio foi garantir precisão em um ambiente não controlado. A detecção de landmarks sofre com variações de iluminação e qualidade da webcam (ruído). Além disso, transformar coordenadas 2D em uma análise de postura confiável exigiu lidar com a instabilidade dos sensores e definir limiares angulares que funcionassem para diferentes biotipos sem gerar falsos positivos constantes.",
-      solution:
-        "Integrei o modelo 'Pose Landmarker' do Google MediaPipe para extração robusta de 33 pontos corporais, processados via OpenCV. A lógica central utiliza a biblioteca NumPy para cálculo vetorial e trigonometria (atan2) entre ombro, quadril e joelho. O sistema opera em um loop de feedback visual imediato, alertando o usuário apenas quando desvios anatômicos críticos são detectados.",
-      features: [
-        "Detecção de esqueleto corporal em tempo real (30+ FPS)",
-        "Cálculo trigonométrico de ângulos articulares",
-        "Feedback visual imediato (Borda Vermelha/Verde)",
-        "Processamento local (Privacidade total do vídeo)",
-        "Arquitetura modular (Separação de Model/Utils/Main)"
-      ],
-      technologies: ["Python"],
-      github: ["https://github.com/Jadson-Js/body_tracker"],
-    }
   ]);
 
   return { projects };
