@@ -1,6 +1,5 @@
 "use client";
 
-import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import { TitleSection } from "../TitleSection";
 import { Card } from "./Card";
 
@@ -14,10 +13,7 @@ import { useProject } from "@/context/ProjectContext";
 export function Projects() {
   const { setProject } = useProject();
   const { projects } = useProjects();
-  const { paginatedItems, next, previous, currentPage } = usePagination(
-    projects,
-    3,
-  );
+  const { paginatedItems, currentPage } = usePagination(projects, 3);
 
   const projectsMobile = () => {
     return projects.map((project, index) => (
