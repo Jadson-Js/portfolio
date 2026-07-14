@@ -32,7 +32,7 @@ export function Navbar() {
           </li>
           <li>
             <Link
-              href={"/CV.pdf"}
+              href={"/Desenvolvedor_Full_Stack-Jadson_Abreu.pdf"}
               className="flex flex-row items-center gap-1 hover:scale-105 transition-transform"
               target="_blank"
               rel="noopener noreferrer"

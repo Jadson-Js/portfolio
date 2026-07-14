@@ -22,7 +22,7 @@ export function Profile() {
 
         <div className="flex flex-col gap-4">
           <Link
-            href={"/CV.pdf"}
+            href={"/Desenvolvedor_Full_Stack-Jadson_Abreu.pdf"}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-slate-800  flex flex-row justify-between items-center gap-4 p-4 rounded-4xl flex-1 uppercase hover:bg-gray-300 transition-all"
@@ -31,7 +31,7 @@ export function Profile() {
           </Link>
 
           <Link
-            href={"/CV.pdf"}
+            href={"/Desenvolvedor_Full_Stack-Jadson_Abreu.pdf"}
             download
             className="border border-white text-white  flex flex-row justify-between items-center gap-4 p-4 rounded-4xl flex-1 uppercase hover:bg-bg3/50 transition-all"
           >
